@@ -7,7 +7,7 @@ echo type nssm install arma3server "C:\Program Files (x86)\Steam\SteamApps\commo
 echo YOU ONLY need to change mod names.
 
 c:\nssm remove arma3server
-c:\nssm install arma3server "C:\Program Files (x86)\Steam\SteamApps\common\Arma 3 Server\arma3server.exe" "-port=10110 -config=RW6\config_rw6.cfg -cfg=Arma3.cfg mod=@CBA_A3;@VTS_Weaponresting;@VTS_Gesture;@hlcmods;@RH_M4"
+c:\nssm install arma3server "C:\Program Files (x86)\Steam\SteamApps\common\Arma 3 Server\arma3server.exe" "-port=10110 -config=RW6\config_rw6.cfg -cfg=Arma3.cfg -bepath=C:\BattlEye\RW6 -mod=@CBA_A3;@VTS_Weaponresting;@VTS_Gesture;@hlcmods;@RH_M4"
 echo DONE
 pause
 cmd.exe
