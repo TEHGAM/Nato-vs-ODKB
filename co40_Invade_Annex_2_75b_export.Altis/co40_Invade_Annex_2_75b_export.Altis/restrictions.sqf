@@ -46,16 +46,32 @@
 				SystemChat "Только офицерам-разведчикам, операторам и снайперам разведки могут выдаваться такие дорогие устройства как Тепловизоры. Only Recons officers, recon snipers and BPA can have such expensive devices as TI.";
 			};
 		};
- 		 /*if ((player hasItem "B_UavTerminal") || (player hasItem "O_UavTerminal") || (player hasItem "I_UavTerminal")) then
-		{
-			if ((typeOf player != "B_soldier_UAV_F") && (typeOf player != "O_soldier_UAV_F")) then
-			{
-				player removeItem "B_UavTerminal";
-				player removeItem "O_UavTerminal";
-				player removeItem "I_UavTerminal";
-				player globalChat "Only UAV are trained with this caliber weapon. Sniper rifle removed.";
-			};
-		}; ожидается функция HasItem пока есть только hasWeapon */	 
+ 		 //------------------------------------- UAV
+
+
+	
+		
+		if (("B_UavTerminal" in assignedItems player) ||
+			("O_UavTerminal" in assignedItems player) ||
+			("I_UavTerminal" in assignedItems player) ) then
+				{
+			
+
+					if ((playerSide == west && typeOf player != "B_soldier_UAV_F") || (playerside == east && typeOf player != "O_soldier_UAV_F")) then
+						{
+				
+
+
+						player removeWeapon "B_UavTerminal";
+						player removeWeapon "O_UavTerminal";
+						player removeWeapon "I_UavTerminal";
+
+						player globalChat "Только операторы БПЛА могут использовать терминал управления.";
+
+
+						};
+				};
+	 
 		/* if ((surfaceIsWater getPos player) && !(vehicle player isKindOf "Air") && !(vehicle player isKindOf "LandVehicle") && !(vehicle player isKindOf "Ship") && !(vehicle player isKindOf "ParachuteBase")) then
 		{
 			if ((vest player != "V_RebreatherB") && (uniform player != "U_B_Wetsuit")) then
