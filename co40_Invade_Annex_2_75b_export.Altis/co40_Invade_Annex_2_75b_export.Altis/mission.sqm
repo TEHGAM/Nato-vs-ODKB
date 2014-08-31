@@ -1,4 +1,4 @@
-﻿version=12;
+version=12;
 class Mission
 {
 	addOns[]=
@@ -90,7 +90,6 @@ class Mission
 		"A3_Armor_F_EPC_MBT_01",
 		"A3_Air_F_Gamma_Plane_Fighter_03",
 		"A3_Soft_F_Quadbike",
-		"a3_soft_f_beta_quadbike",
 		"A3_Structures_F_Civ_InfoBoards",
 		"A3_Structures_F_Mil_Flags",
 		"A3_Armor_F_AMV",
@@ -918,7 +917,7 @@ class Mission
 					rank="CAPTAIN";
 					skill=0.60000002;
 					init="this addEventHandler [""respawn"", {_this execVM ""scripts\admin_uid.sqf""}];0 = [] execVM 'DOM_squad\group_manager.sqf';";
-					description="[Фокстрот] Экипаж Командир";
+					description="[Фокстрот] Экипаж\Крыло Командир";
 				};
 			};
 		};
@@ -2024,7 +2023,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=249;
+		items=251;
 		class Item0
 		{
 			position[]={14593.639,17.801865,16899.08};
@@ -2996,7 +2995,7 @@ class Mission
 		};
 		class Item90
 		{
-			position[]={15155.077,17.91,17205.232};
+			position[]={14543.762,17.91,16750.096};
 			azimut=131.571;
 			id=166;
 			side="EMPTY";
@@ -3185,7 +3184,7 @@ class Mission
 		};
 		class Item108
 		{
-			position[]={15149.36,17.91,17198.086};
+			position[]={14538.288,17.91,16744.322};
 			azimut=131.571;
 			id=184;
 			side="EMPTY";
@@ -4665,6 +4664,29 @@ class Mission
 			lock="UNLOCKED";
 			skill=0.60000002;
 		};
+		class Item249
+		{
+			position[]={14531.837,17.91,16737.682};
+			azimut=131.571;
+			id=325;
+			side="EMPTY";
+			vehicle="B_APC_Wheeled_01_cannon_F";
+			leader=1;
+			skill=0.60000002;
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item250
+		{
+			position[]={15154.732,17.900385,17269.443};
+			azimut=-855.914;
+			id=326;
+			side="EMPTY";
+			vehicle="B_APC_Tracked_01_CRV_F";
+			leader=1;
+			skill=0.60000002;
+			text="Bobcat_1_3";
+			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
 	};
 	class Markers
 	{
@@ -5659,7 +5681,7 @@ class Mission
 		class Item130
 		{
 			position[]={15181.912,17.910995,17303.666};
-			name="ammocargo_1";
+			name="ammocargo2";
 			text="Боекомплекты: Бобкет";
 			type="o_support";
 			colorName="ColorWEST";
@@ -5879,14 +5901,14 @@ class Mission
 			position[]={15181.938,17.910728,17303.891};
 			a=4;
 			b=4;
-			angle=229.15865;
+			angle=229.159;
 			rectangular=1;
 			activationBy="WEST";
 			repeating=1;
 			interruptable=1;
 			age="UNKNOWN";
-			name="amb1_1";
-			expActiv="nothing = [amb1] execVM ""boxZone.sqf"";";
+			name="amb2";
+			expActiv="nothing = [amb2] execVM ""boxZone.sqf"";";
 			class Effects
 			{
 			};
