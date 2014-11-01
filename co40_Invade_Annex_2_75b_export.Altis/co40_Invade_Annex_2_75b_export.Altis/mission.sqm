@@ -1194,7 +1194,7 @@ class Mission
 						items=4;
 						class Item0
 						{
-							value="#adminVoted";
+							value="#adminLogged";
 							parentCls="ModuleCurator_F";
 							typeName="Owner";
 						};
@@ -1206,7 +1206,7 @@ class Mission
 						};
 						class Item2
 						{
-							value="2";
+							value="3";
 							parentCls="ModuleCurator_F";
 							typeName="Addons";
 						};
@@ -4690,7 +4690,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=131;
+		items=133;
 		class Item0
 		{
 			position[]={-19045.328,-0.063364498,-7679.1191};
@@ -5665,7 +5665,7 @@ class Mission
 		{
 			position[]={492.68335,-0.0077398201,32090.488};
 			name="ts2";
-			text="Reserved TeamSpeak 3 адрес:  tehgam.no-ip.org (188.244.37.39)";
+			text="Backup TeamSpeak 3 server:  tehgam.no-ip.org (188.244.37.39)";
 			type="mil_box";
 			colorName="ColorRed";
 		};
@@ -5686,6 +5686,22 @@ class Mission
 			type="o_support";
 			colorName="ColorWEST";
 			angle=184.159;
+		};
+		class Item131
+		{
+			position[]={14388.744,19.003143,16212.54};
+			name="wjets3";
+			text="A-164";
+			type="c_plane";
+			colorName="ColorWEST";
+		};
+		class Item132
+		{
+			position[]={14420.102,18.751451,16352.24};
+			name="wjets4";
+			text="A-164";
+			type="c_plane";
+			colorName="ColorWEST";
 		};
 	};
 	class Sensors
