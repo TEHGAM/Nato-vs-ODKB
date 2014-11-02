@@ -2836,13 +2836,13 @@ class Mission
 		class Item75
 		{
 			position[]={14163.863,20.533001,16192.247};
-			azimut=116.16665;
+			azimut=116.167;
 			offsetY=0.2;
 			id=151;
 			side="EMPTY";
 			vehicle="B_Heli_Light_01_armed_F";
 			skill=0.60000002;
-			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf""; _m = [this] execVM ""cf.sqf"";";
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf""; _m = [this] execVM ""cf.sqf""; [this] call LB_fnc_initVehicle;";
 		};
 		class Item76
 		{
@@ -3242,13 +3242,13 @@ class Mission
 		class Item113
 		{
 			position[]={14287.703,19.233419,16334.635};
-			azimut=171.18951;
+			azimut=171.19;
 			offsetY=0.2;
 			id=189;
 			side="EMPTY";
 			vehicle="B_Heli_Attack_01_F";
 			skill=0.60000002;
-			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf""; _m = [this] execVM ""cf.sqf"";";
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf""; _m = [this] execVM ""cf.sqf""; [this] call LB_fnc_initVehicle;";
 		};
 		class Item114
 		{
@@ -3259,7 +3259,7 @@ class Mission
 			side="EMPTY";
 			vehicle="B_Heli_Attack_01_F";
 			skill=0.60000002;
-			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf""; _m = [this] execVM ""cf.sqf"";";
+			init="_m = [this,1800,1801] execVM ""scripts\vehicle\monitor.sqf""; _m = [this] execVM ""cf.sqf""; [this] call LB_fnc_initVehicle;";
 		};
 		class Item115
 		{
