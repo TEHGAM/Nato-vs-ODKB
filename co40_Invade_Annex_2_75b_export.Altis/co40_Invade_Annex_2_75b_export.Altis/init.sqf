@@ -1,4 +1,4 @@
-// JIP Check (This code should be placed first line of init.sqf file)
+﻿// JIP Check (This code should be placed first line of init.sqf file)
 if (!isServer && isNull player) then {isJIP=true;} else {isJIP=false;};
 
 
@@ -166,3 +166,7 @@ _null = [] execVM "scripts\misc\clearItems.sqf";
 [] execVM "real_weather.sqf";
 [] execVM "outlw_magRepack\MagRepack_init_sv.sqf";	
  _igiload = execVM "IgiLoad\IgiLoadInit.sqf"; // Транспортировка грузов Мохавком или грузовиками (контейнеры и квадроциклы, подводная лодка.
+[["scripts\transport\init.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP; //Транспортировка подвесом.
+[["scripts\player\init.sqf"],"BIS_fnc_execVM",true,true] call BIS_fnc_MP;
+//_transportSqf = [] execVM "scripts\transport\init.sqf";
+//_transportInit = [] execVM "scripts\player\init.sqf";
