@@ -15,11 +15,18 @@
 			{
 				[_x, 3, [0,2,-10]] execVM "scripts\transport\fn_SetupTransport.sqf";			
 			};
+
 			case "RHS_CH_47F_light":
 			{
 				[_x, 3, [0,2,-10]] execVM "scripts\transport\fn_SetupTransport.sqf";			
 			};
+
 			case "B_Heli_Transport_03_unarmed_F":
+			{
+				[_x, 3, [0,2,-10]] execVM "scripts\transport\fn_SetupTransport.sqf";			
+			};
+
+			case "RHS_Mi8mt_vvsc":
 			{
 				[_x, 3, [0,2,-10]] execVM "scripts\transport\fn_SetupTransport.sqf";			
 			};

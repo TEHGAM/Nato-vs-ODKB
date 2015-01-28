@@ -12,18 +12,18 @@ Quiksilver notes:
 
 _________________________________________________*/
 
-#define AT_MSG "Only AT Soldiers may use this weapon system. Launcher removed."
+#define AT_MSG "Only AT and AA Soldiers may use this weapon system. Launcher removed."
 #define SNIPER_MSG "Only Snipers may use this weapon system. Sniper rifle removed."
 #define AUTOTUR_MSG "You are not allowed to use this weapon system, Backpack removed."
-#define UAV_MSG "Only UAV operator may use this Item, UAV terminal removed."
+#define UAV_MSG "Only officer at Lieutenant rank may use this Item, UAV terminal removed."
 
 while { true } do {
 
 	//------------------------------------- Launchers
 
-	if ((player hasWeapon "launch_NLAW_F") || (player hasWeapon "launch_B_Titan_F") || (player hasWeapon "launch_O_Titan_F") || (player hasWeapon "launch_I_Titan_F") || (player hasWeapon "launch_B_Titan_short_F") || (player hasWeapon "launch_O_Titan_short_F") || (player hasWeapon "launch_I_Titan_short_F") || (player hasWeapon "rhs_weap_fgm148") || (player hasWeapon "rhs_weap_fim92")) then
+	if ((player hasWeapon "launch_NLAW_F") || (player hasWeapon "launch_B_Titan_F") || (player hasWeapon "launch_O_Titan_F") || (player hasWeapon "launch_I_Titan_F") || (player hasWeapon "launch_B_Titan_short_F") || (player hasWeapon "launch_O_Titan_short_F") || (player hasWeapon "launch_I_Titan_short_F") || (player hasWeapon "rhs_weap_fgm148") || (player hasWeapon "rhs_weap_fim92") || (player hasWeapon "rhs_weap_igla")) then
 	{
-		if ((playerSide == west && typeOf player != "B_soldier_LAT_F" && typeOf player != "B_recon_LAT_F" && typeOf player != "B_soldier_AT_F" && typeOf player != "rhsusf_army_ucp_javelin"  && typeOf player != "rhsusf_army_ucp_aa") || (playerside == east && typeOf player != "O_soldier_LAT_F") || (playerside == resistance && typeOf player != "I_soldier_LAT_F")) then
+		if ((playerSide == west && typeOf player != "B_soldier_LAT_F" && typeOf player != "B_recon_LAT_F" && typeOf player != "B_soldier_AT_F" && typeOf player != "rhsusf_army_ucp_javelin"  && typeOf player != "rhsusf_army_ucp_aa") || (playerside == east && typeOf player != "O_soldier_LAT_F" && typeOf player != "rhs_vdv_aa" && typeOf player != "rhs_vdv_at") || (playerside == resistance && typeOf player != "I_soldier_LAT_F")) then
 		{
 			player removeWeapon (secondaryWeapon player);
 			titleText [AT_MSG, "PLAIN", 3];
@@ -34,7 +34,7 @@ while { true } do {
 
 	if ((player hasWeapon "srifle_GM6_F") || (player hasWeapon "srifle_GM6_LRPS_F") || (player hasWeapon "srifle_LRR_F") || (player hasWeapon "srifle_GM6_SOS_F") || (player hasWeapon "srifle_GM6_camo_F") || (player hasWeapon "srifle_GM6_camo_SOS_F") || (player hasWeapon "srifle_GM6_camo_LRPS_F") || (player hasWeapon "srifle_LRR_camo_F") || (player hasWeapon "srifle_LRR_camo_LRPS_F") || (player hasWeapon "srifle_LRR_camo_SOS_F") || (player hasWeapon "srifle_LRR_LRPS_F") || (player hasWeapon "srifle_LRR_SOS_F")) then
 	{
-		if ((playerSide == west && typeOf player != "B_sniper_F") || (playerside == east && typeOf player != "O_sniper_F")) then
+		if ((playerSide == west && typeOf player != "rhsusf_army_ucp_sniper") || (playerside == east && typeOf player != "rhs_vdv_marksman")) then
 		{
 			player removeWeapon (primaryWeapon player);
 			titleText [SNIPER_MSG, "PLAIN", 3];
@@ -43,7 +43,7 @@ while { true } do {
 
 	//------------------------------------- UAV
 
-	_uavOperator = ["B_soldier_UAV_F","B_officer_F"];
+	_uavOperator = ["rhs_vdv_officer","rhsusf_army_ucp_teamleader"];
    	_uavRestricted = ["B_UavTerminal","O_UavTerminal","I_UavTerminal"];
     _assignedItems = assignedItems player;
 
@@ -55,7 +55,7 @@ while { true } do {
 		};
 	};
 
-	//------------------------------------- Opfor turret backpacks
+	//------------------------------------- turret backpacks
 
 	_backpackRestricted = [
 		"O_Mortar_01_support_F",
@@ -99,4 +99,5 @@ while { true } do {
 		titleText [AUTOTUR_MSG, "PLAIN", 3];
 	};
 	sleep 5;
+    
 };
