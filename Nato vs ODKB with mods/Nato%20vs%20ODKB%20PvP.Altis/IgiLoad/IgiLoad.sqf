@@ -1520,21 +1520,21 @@ if (_obj_main_type in IL_Supported_Vehicles_MOHAWK) then
 	"(_target getVariable 'box_num' < 0) && ((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_load') && (((getPosATL _target) select 2) >= IL_Para_Drop_ATL) && (_target animationPhase 'CargoRamp_Open' == 1)"
 	];
 
-	_obj_main addAction [
-	"<t color=""#0000ff"">Open cargo ramp in CH-49</t>",
-	{
-		_this select 0 animate ['CargoRamp_Open', 1];
-	},[],IL_Action_O_Priority,false,true,"",
-	"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-6,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'CargoRamp_Open' == 0) && (_target getVariable 'can_load')"
-	];
+//	_obj_main addAction [
+//	"<t color=""#0000ff"">Open cargo ramp in CH-49</t>",
+//	{
+//		_this select 0 animate ['CargoRamp_Open', 1];
+//	},[],IL_Action_O_Priority,false,true,"",
+//	"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-6,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'CargoRamp_Open' == 0) && (_target getVariable 'can_load')"
+//	];
 
-	_obj_main addAction [
-	"<t color=""#0000ff"">Close cargo ramp in CH-49</t>",
-	{
-		_this select 0 animate ['CargoRamp_Open', 0];
-	},[],IL_Action_O_Priority,false,true,"",
-	"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-6,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'CargoRamp_Open' == 1) && (_target getVariable 'can_load')"
-	];
+//	_obj_main addAction [
+//	"<t color=""#0000ff"">Close cargo ramp in CH-49</t>",
+//	{
+//		_this select 0 animate ['CargoRamp_Open', 0];
+//	},[],IL_Action_O_Priority,false,true,"",
+//	"((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot')) || ((_this in (nearestObjects[ _target modelToWorld [0,-6,-3], [], IL_SDistL + IL_SDistL_Heli_offset])) && (_target getVariable 'can_outside'))) && (_target animationPhase 'CargoRamp_Open' == 1) && (_target getVariable 'can_load')"
+//	];
 	
 	_obj_main addAction [
 	"<t color=""#0000ff"">Enable loading for Co-Pilot</t>",
@@ -1568,21 +1568,21 @@ if (_obj_main_type in IL_Supported_Vehicles_MOHAWK) then
 	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'can_outside') && IL_Can_Outside)"
 	];
 
-	_obj_main addAction [
-	"<t color=""#0000ff"">Enable usable ramp</t>",
-	{
-		(_this select 0) setVariable["usable_ramp", true, true];;
-	},[],IL_Action_S_Priority,false,true,"",
-	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && !(_target getVariable 'usable_ramp') && IL_Ramp)"
-	];
+//	_obj_main addAction [
+//	"<t color=""#0000ff"">Enable usable ramp</t>",
+//	{
+//		(_this select 0) setVariable["usable_ramp", true, true];;
+//	},[],IL_Action_S_Priority,false,true,"",
+//	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && !(_target getVariable 'usable_ramp') && IL_Ramp)"
+//	];
 
-	_obj_main addAction [
-	"<t color=""#0000ff"">Disable usable ramp</t>",
-	{
-		(_this select 0) setVariable["usable_ramp", false, true];;
-	},[],IL_Action_S_Priority,false,true,"",
-	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'usable_ramp') && IL_Ramp)"
-	];
+//	_obj_main addAction [
+//	"<t color=""#0000ff"">Disable usable ramp</t>",
+//	{
+//		(_this select 0) setVariable["usable_ramp", false, true];;
+//	},[],IL_Action_S_Priority,false,true,"",
+//	"(((driver _target == _this) || (('Turret' in (assignedVehicleRole _this)) && (vehicle _this == _target) && (_target getVariable 'can_copilot'))) && (_target getVariable 'usable_ramp') && IL_Ramp)"
+//	];
 };
 if (_obj_main_type in IL_Supported_Vehicles_CHINOOK) then
 {

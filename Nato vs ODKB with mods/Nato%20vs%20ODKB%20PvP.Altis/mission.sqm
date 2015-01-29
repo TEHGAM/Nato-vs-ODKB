@@ -56,7 +56,11 @@ class Mission
 		"globemaster_c17",
 		"A3_Armor_F_EPC_MBT_01",
 		"task_force_radio_items",
-		"rhs_c_cars"
+		"rhs_c_cars",
+		"A3_Air_F_Heli_Heli_Transport_04",
+		"rhs_main",
+		"A3_Armor_F_AMV",
+		"A3_Soft_F_MRAP_01"
 	};
 	addOnsAuto[]=
 	{
@@ -113,6 +117,10 @@ class Mission
 		"A3_Armor_F_EPC_MBT_01",
 		"task_force_radio_items",
 		"rhs_c_cars",
+		"A3_Air_F_Heli_Heli_Transport_04",
+		"rhs_main",
+		"A3_Armor_F_AMV",
+		"A3_Soft_F_MRAP_01",
 		"a3_map_altis"
 	};
 	randomSeed=2635349;
@@ -2694,7 +2702,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=344;
+		items=353;
 		class Item0
 		{
 			position[]={26711.563,19.800709,24621.908};
@@ -6177,6 +6185,94 @@ class Mission
 			skill=0.44999999;
 			init="_m = [this,15,300] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
+		class Item344
+		{
+			position[]={20926.797,27.031717,7273.9165};
+			azimut=-140.57201;
+			id=452;
+			side="EMPTY";
+			vehicle="O_Heli_Transport_04_F";
+			leader=1;
+			skill=0.60000002;
+			text="taruCrane";
+			init="_m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
+		};
+		class Item345
+		{
+			position[]={20926.072,27.122952,7273.0151};
+			azimut=210.43167;
+			id=453;
+			side="EMPTY";
+			vehicle="Land_HelipadSquare_F";
+			skill=0.60000002;
+		};
+		class Item346
+		{
+			position[]={20927.57,27.654324,7264.1714};
+			azimut=28.746763;
+			id=454;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item347
+		{
+			position[]={20917.709,27.527756,7270.0127};
+			azimut=28.746763;
+			id=455;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item348
+		{
+			position[]={20924.797,26.206541,7281.7021};
+			azimut=28.746763;
+			id=456;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item349
+		{
+			position[]={20934.42,26.595409,7276.2256};
+			azimut=28.746763;
+			id=457;
+			side="EMPTY";
+			vehicle="Land_runway_edgelight_blue_F";
+			skill=0.60000002;
+		};
+		class Item350
+		{
+			position[]={20825.326,27.496065,7286.2881};
+			azimut=-140.57201;
+			id=458;
+			side="EMPTY";
+			vehicle="rhs_Flag_Russia_F";
+			leader=1;
+			skill=0.60000002;
+			init="this addAction[""<t color='#FFBF00'>Просьба захватить новую технику ботов или Зевса!</t>"", ""scripts\transport\init.sqf""];";
+		};
+		class Item351
+		{
+			position[]={20854.926,27.340689,7283.3975};
+			azimut=-140.57201;
+			id=459;
+			side="EMPTY";
+			vehicle="B_APC_Wheeled_01_cannon_F";
+			leader=1;
+			skill=0.60000002;
+		};
+		class Item352
+		{
+			position[]={20864.344,27.34358,7278.9058};
+			azimut=-140.57201;
+			id=460;
+			side="EMPTY";
+			vehicle="B_MRAP_01_F";
+			leader=1;
+			skill=0.60000002;
+		};
 	};
 	class Markers
 	{
@@ -6395,7 +6491,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=15;
+		items=16;
 		class Item0
 		{
 			position[]={26764.35,20.556068,24647.184};
@@ -6647,6 +6743,22 @@ class Mission
 			age="UNKNOWN";
 			expCond="this and ((getPos (thisList select 0)) select 2 < 1)";
 			expActiv="_handle = [(thisList select 0)] execVM ""scripts\misc\rearmVehicle.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item15
+		{
+			position[]={20821.111,27.542427,7288.7847};
+			a=1;
+			b=1;
+			activationType="NOT PRESENT";
+			repeating=1;
+			timeoutMin=50;
+			timeoutMid=50;
+			interruptable=1;
+			age="UNKNOWN";
+			expActiv="systemchat ""HELLO THE WORLD""";
 			class Effects
 			{
 			};

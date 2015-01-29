@@ -132,10 +132,12 @@ while {_run} do {
 		sleep 3;
 		
 		_unit = _type createVehicle _position;
+		
 		_unit setPosATL [_position select 0,_position select 1,(_position select 2) + 0.2];
 		_unit setDir _dir;
 		
 		[[[_unit],"scripts\vehicle\setupUnit.sqf"],"BIS_fnc_execVM",nil,true] spawn BIS_fnc_MP;
+		_classify = [ _unit ] execVM "scripts\transport\classify.sqf"; // only for Transport script
 
 		{
 			_x addCuratorEditableObjects [[_unit],false];
