@@ -1,10 +1,4 @@
-<p align="center">
-  <a href="https://github.com/TEHGAM/RW2">
-    <img src="https://raw.githubusercontent.com/Tourorist/TPS/master/rw2/adr-logo-03.png"
-         width="320"
-         alt="Annex Дone Right" />
-  </a>
-</p>
+Нету пока эмблемы никакой... в стадии разработки. 
 <h2 align="center">Nato vs ODKB</h2>
 <p align="center">
   <a href="https://github.com/TEHGAM/RW6/wiki">
@@ -35,11 +29,12 @@
 * [aeroson](https://github.com/aeroson) за скрипт сбора мусора ([Repetitive Cleanup](https://github.com/aeroson/a3-misc/blob/master/repetitive_cleanup.sqf)) и скрипт [маркировки игроков](https://github.com/aeroson/a3-misc/blob/master/player_markers.sqf).
 * [Tophe](http://meadows.se/) за скрипт [востановления техники](http://www.armaholic.com/page.php?id=6080).
 * [Bob_Gneu](http://gneu.org/) за скрипт [крепления стропами](http://www.armaholic.com/page.php?id=20530).
-* Отдельное спасибо всем регулярным игрокам и администраторам [официального сервера](https://github.com/TEHGAM/RW2/wiki/RW2:-%D0%A1%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0), которые уделяют свое время проекту:
+* [Igi_PL](http://www.igipl.net/) за скрипт Логистики для грузовых транспортов.
+* Отдельное спасибо всем регулярным игрокам и администраторам [официального сервера TehGam 2](https://github.com/TEHGAM/RW2/wiki/RW2:-%D0%A1%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0), которые уделяют свое время проекту:
   * внося нам свои предложения по дальнейшей разработке миссии,
-  * указывая на её существующие проблемы,
-  * следя за соблюдением [наших правил](https://github.com/TEHGAM/RW2/wiki/RW%3A-%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0),
-  * и поддерживая [общий порядок](http://tehgam.com/viewtopic.php?f=11&t=6) игры.
+  * указывая на её существующие проблемы, предлагают идеи,
+  * следят за соблюдением [наших правил](https://github.com/TEHGAM/RW2/wiki/RW%3A-%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0),
+  * и поддерживют [общий порядок](http://tehgam.com/viewtopic.php?f=11&t=6) игры.
 
 <hr />
 <p align="center">
