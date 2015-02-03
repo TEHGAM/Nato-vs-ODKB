@@ -1,16 +1,46 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//	IgiLoad v0.9.9																							//
+//	IgiLoad v0.9.10_RC_e_(Arma3_1.32)																		//
+//	Version info: This is not official version of IgiLoad it is only WIP (RC)								//
 //	Author: Igi_PL																							//
 //	Web: http://www.igipl.net/																				//
-//	Version date: 2014.03.23																				//
+//	Version date: 2014.10.16																				//
 //																											//
 //	USE:																									//
 //	1. In mission "init.sqf" add line: "0 = execVM "IgiLoad\IgiLoadInit.sqf";".								//
 //	2. In vehicles "INITIALIZATION" field type: "0 = [this] execVM "IgiLoad\IgiLoad.sqf";"					//
-//	3. Loading cargo from script. Force load: "0 = [Car, [typeOf Box], "B", true, Box] spawn IL_Do_Load;"	//
+//	3. Unload from script or trigger:																		//
+//		a) Unloading cargo from script. Force unload: "0 = [Car, true, "L"] spawn IL_Do_Unload;"			//
+//		b) Unloading cargo from script. Force unload: "0 = [Car, true] spawn IL_Do_Unload;"					//
+//		c) Unloading cargo from script. Force unload: "0 = [Car] spawn IL_Do_Unload;"						//
+//	4. Loading cargo from script. Force load: "0 = [Car, [typeOf Box], "B", true, Box] spawn IL_Do_Load;"	//
 //																											//
 //	Ways from points 1 and 2 can not be used simultaneously!!!												//
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+//	Changelog v0.9.10_RC_e_(Arma3_1.32)
+//	Fix: "assignedVehicleRole" do not work with "Cargo" - change to "cargo".
+//	Fix: "animate" do not work with CH-49 Mohawk - change to "animatedoor".
+//
+//	Changelog v0.9.10_RC_d:
+//	New: Change in mass of vehicle. IgiLoad add mass of ALL atached objects to vehicle mass.
+//	New: Variable for enable or disable change of vehicle mass IL_Mass.
+//	New: New cargoes non vehicle: "C_supplyCrate_F", "Box_mas_all_rifle_Wps_F", "Box_mas_us_rifle_Wps_F", "Box_mas_ru_rifle_Wps_F", "Box_mas_mar_NATO_equip_F", "Box_mas_mar_NATO_Wps_F"
+//	New: New cargoes vehicle: "C_Hatchback_01_sport_F", "B_mas_mar_MRAP_01_F", "B_mas_mar_MRAP_01_F", "B_mas_mar_MRAP_01_med_F", "B_mas_mar_MRAP_01_gmg_F", "B_mas_mar_MRAP_01_hmg_F", "B_mas_mar_Quadbike_01_F", "B_mas_mar_Offroad_01_F", "B_mas_mar_Offroad_01_armed_F", "B_mas_mar_Boat_Transport_01_F", "B_mas_mar_SDV_01_F"
+//	New: New transport vehicles: "B_mas_mar_Truck_01_covered_F", "B_mas_mar_Truck_01_transport_F", "B_mas_mar_Heli_Light_01_F", "B_mas_mar_Offroad_01_F"
+//	New: New transport vehicles: "kyo_MH47E_HC", "kyo_MH47E_Ramp", "kyo_MH47E_base"
+//	New: Variables to control the parachute opening height: IL_Para_Drop_Open_ATL, IL_Para_Jump_Open_ATL. Set to 0 to open parachute immediately.
+//	New: Parachute will not open immediately. The default limit of height is 150m for player and 200m for cargo.
+//	New: Parachutes get player and cargo velocity.
+//	New: Score is added to player after loading and unloading cargo.
+//	New: Variables to control added score: IL_Load_Score and IL_Unload_Score.
+//	New: Variables: IL_Para_Drop_Velocity, IL_Para_Jump_Velocity. Set to false do do not set velocity to parachutes.
+//	New: Land Cargo20 are supported cargoes non vehicle for HEMTT, ZAMAK and TEMPEST (damaging C-17 and C-130): "Land_Cargo20_blue_F", "Land_Cargo20_brick_red_F", "Land_Cargo20_cyan_F", "Land_Cargo20_grey_F", "Land_Cargo20_light_blue_F", "Land_Cargo20_light_green_F", "Land_Cargo20_military_green_F", "Land_Cargo20_orange_F", "Land_Cargo20_red_F", "Land_Cargo20_sand_F", "Land_Cargo20_white_F", "Land_Cargo20_yellow_F"
+//	New: IgiLoad set new mass for Land Cargo20 to 2400. Arma default was set to 20000.
+//	Change: Cargoes zload is from boundingBoxReal.
+//	Change: Mohawks can load UGV.
+//	Change: Longer unload path for unload with parachute in C-17 and C-130.
+//	Fix: Cargo drop at 000000 by attaching chute to cargo after create chute.
+//	Fix: Rotation of attached objects.
 //
 //	Changelog v0.9.9:
 //	New: New vehicles - Boeing C-17 by randomslap: "globemaster_c17_altus", "globemaster_c17_701", "globemaster_c17_703", "globemaster_c17_704",
