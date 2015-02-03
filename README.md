@@ -17,7 +17,7 @@
 
 Мы приветствуем, будем рады и благодарны за любой вклад в развитие данной версии [Nato vs ODKB](На основе работ Rarek, QuickSilver,AhoyWorld, BI Community). Вы можете помочь нам в этом оставляя свои отзывы в [частном разделе](http://www.tehgam.com/viewtopic.php?f=112&t=761) проекта на форуме TEHGAM, а также [определяя задачи](https://github.com/TEHGAM/RW6/issues) по его дальнейшему улучшению.
 
-При наличии навыков редактирования Arma 3 и желании содействовать в разработке AДR напрямую, Вы можете присоединиться к [её разработчикам](https://github.com/TEHGAM/RW6/graphs/contributors) делая [запросы на включение](https://github.com/TEHGAM/RW6/pulls?q=is%3Apr+is%3Aclosed) своих изменений для рассмотрения [руководителем проекта](https://github.com/a11archer).
+При наличии навыков редактирования Arma 3 и желании содействовать в разработке новых миссий напрямую, Вы можете присоединиться к [её разработчикам](https://github.com/TEHGAM/RW2/graphs/contributors) делая [запросы на включение](https://github.com/TEHGAM/RW6/pulls?q=is%3Apr+is%3Aclosed) своих изменений для рассмотрения [руководителем проекта](https://github.com/a11archer).
 
 ####Огромное Спасибо
 * Джек Уильямс ([Rarek](https://bitbucket.org/Rarek)) и [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI), а также сообщества [Ahoy World](http://www.ahoyworld.co.uk/) и [allFPS](http://allfps.com.au/) — за труд над исходной миссией.
