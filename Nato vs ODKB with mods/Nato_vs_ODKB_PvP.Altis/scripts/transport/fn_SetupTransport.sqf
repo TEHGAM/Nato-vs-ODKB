@@ -1,4 +1,4 @@
-private ["_Vehicle", "_Value", "_Offset"];
+﻿private ["_Vehicle", "_Value", "_Offset"];
 
 _Vehicle = _this select 0;
 _Value = _this select 1;
@@ -14,11 +14,16 @@ if (_vehicle getVariable "AttachedVehicle" == objNull) then
 };
 	_Vehicle setVariable ["AttachOffset", _Offset];
 
+k = _Vehicle getVariable "attachaction";
+k1 = _Vehicle getVariable "detachaction";
 _Vehicle removeAction k;
 _Vehicle removeAction k1;
 
 k = _Vehicle addAction["<t size='1.5' shadow='2'color='#C9C900'>Прицепить технику</t>", "scripts\transport\attach.sqf", [_Vehicle], 10, false, true, "", "isPlayer driver _target && isNull(_target getVariable ""AttachedVehicle"") && !isNull(driver _target getVariable ""CurrentTarget"")"];
 k1 = _Vehicle addAction["<t size='1.5' shadow='2'color='#C9C900'>Отцепить технику</t>", "scripts\transport\detach.sqf", [_Vehicle], 10, false, true, "", "!isNull(_target getVariable ""AttachedVehicle"")"];
+
+_Vehicle setVariable ["attachaction", k];
+_Vehicle setVariable ["detachaction", k1];
 
 _Vehicle addEventHandler ["GetOut", { if (_this select 1 == "driver") then { [(_this select 0)] execVM "scripts\transport\detach.sqf"; }}];
 _Vehicle addEventHandler ["GetIn", { if (_this select 1 == "driver") then { [(_this select 0)] execVM "scripts\transport\detach.sqf"; }}];
