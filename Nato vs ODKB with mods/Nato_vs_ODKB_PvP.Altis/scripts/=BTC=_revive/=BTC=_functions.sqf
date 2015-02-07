@@ -102,7 +102,7 @@ BTC_get_gear =
 };
 BTC_set_gear =
 {
-player addEventHandler ["Возрождение", { _this execVM "scripts\player\transportCheck.sqf"; } ]; //переинициализация возможностей при возрождении
+player addEventHandler ["Р’РѕР·СЂРѕР¶РґРµРЅРёРµ", { _this execVM "scripts\player\transportCheck.sqf"; } ];
 player execVM "scripts\player\transportCheck.sqf";
 
 	/*_gear =
