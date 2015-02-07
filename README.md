@@ -48,6 +48,6 @@
   </a>
     <a href="http://www.tehgam.com/viewforum.php?f=112">
     <img src="https://img.shields.io/badge/TEHGAM-Форум-lightgrey.svg?style=flat"
-         alt="Игра и отзывы" />
+         alt="Форум" />
   </a>
   </p>
