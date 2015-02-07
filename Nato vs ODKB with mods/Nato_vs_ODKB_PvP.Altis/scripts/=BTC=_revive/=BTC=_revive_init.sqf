@@ -177,5 +177,5 @@ BTC_respawn_cond = false;
 	if (({player isKindOf _x} count BTC_3d_can_see) > 0) then {if (BTC_pvp == 1) then {_3d = [] spawn BTC_3d_markers_pvp;} else {_3d = [] spawn BTC_3d_markers;};};
 	
 	BTC_revive_started = true;
-	//hint "REVIVE STARTED";
+	SystemChat "=BTC=Revive STARTED";
 };
