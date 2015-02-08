@@ -26,26 +26,26 @@
 * Джек Уильямс ([Rarek](https://bitbucket.org/Rarek)) и [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI), а также сообщества [Ahoy World](http://www.ahoyworld.co.uk/) и [allFPS](http://allfps.com.au/) — за труд над исходной миссией послужившей прототипом для NATO vs ODKB. Большинство идей взято именно из их работ.
 * [Giallustio](http://www.giallustio.altervista.org/) за скрипт [возрождения](http://www.armaholic.com/page.php?id=18955), [наказания](http://www.armaholic.com/page.php?id=19099) игроков и [логистики](http://www.armaholic.com/page.php?id=12356).
 * [BangaBob](http://forums.bistudio.com/member.php?91717-BangaBob) за [EOS](http://www.armaholic.com/page.php?id=20262) (Enemy Occupation System).
-* [Xeno](http://dev.withsix.com/users/22) за меню управления отрядами ([DOM_squad](https://github.com/TEHGAM/RW2/blob/master/Annex_Done_Right.Altis/scripts/DOM_squad)).
+* [Xeno](http://dev.withsix.com/users/22) за меню управления отрядами ([DOM_squad](https://github.com/TEHGAM/ADR/blob/master/Annex_Done_Right.Altis/scripts/DOM_squad)).
 * [Tonic](http://forums.bistudio.com/member.php?75622-Tonic-_-) за систему снаряжения и экипировки ([VAS](http://www.armaholic.com/page.php?id=19134)) и управления [дальностью отображения](http://www.armaholic.com/page.php?id=19751).
 * [aeroson](https://github.com/aeroson) за скрипт сбора мусора ([Repetitive Cleanup](https://github.com/aeroson/a3-misc/blob/master/repetitive_cleanup.sqf)) и скрипт [маркировки игроков](https://github.com/aeroson/a3-misc/blob/master/player_markers.sqf).
 * [Tophe](http://meadows.se/) за скрипт [востановления техники](http://www.armaholic.com/page.php?id=6080).
 * [Bob_Gneu](http://gneu.org/) за скрипт [крепления стропами](http://www.armaholic.com/page.php?id=20530).
 * [Igi_PL](http://www.igipl.net/) за скрипт логистики грузовых транспортов.
-* Отдельное спасибо всем регулярным игрокам и администраторам [сервера TEHGAM 2](https://github.com/TEHGAM/RW2/wiki/RW2:-%D0%A1%D0%B2%D0%BE%D0%B4%D0%BA%D0%B0), которые уделяют свое время проекту:
+* Отдельное спасибо всем регулярным игрокам и администраторам [сервера TEHGAM 2](https://github.com/TEHGAM/ADR/wiki/T2:-Сводка), которые уделяют свое время проекту:
   * внося нам свои предложения по дальнейшей разработке миссии,
   * указывая на её существующие проблемы, предлагают идеи,
-  * следят за соблюдением [наших правил](https://github.com/TEHGAM/RW2/wiki/RW%3A-%D0%9F%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B0),
+  * следят за соблюдением [наших правил](https://github.com/TEHGAM/ADR/wiki/Правила),
   * и поддерживют [общий порядок](http://tehgam.com/viewtopic.php?f=11&t=6) игры.
 
 <hr />
 <p align="center">
-  <a href="https://github.com/TEHGAM/RW2/wiki">
+  <a href="https://github.com/TEHGAM/ADR/wiki">
     <img src="https://img.shields.io/badge/ADR-Вики-orange.svg?style=flat"
          alt="Вики" />
   </a>
 <!---Лицензию проекта сам определи и внеси в собственную репку (правило GitHub-а).
-    <a href="https://github.com/TEHGAM/RW2/blob/master/LICENSE">
+  <a href="https://github.com/TEHGAM/ADR/blob/master/LICENSE">
     <img src="http://img.shields.io/badge/Лицензия-MIT-red.svg?style=flat"
          alt="Лицензия" />
   </a>
