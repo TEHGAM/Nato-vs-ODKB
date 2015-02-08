@@ -5,7 +5,7 @@
     <img src="http://img.shields.io/badge/Версия-1.0.0-blue.svg?style=flat"
          alt="Версия" />
   </a>
-  <a href="http://www.tehgam.com/viewtopic.php?p=13735#p13735">
+  <a href="">
     <img src="http://img.shields.io/badge/Скачать-1.13_МБ-green.svg?style=flat"
          alt="Скачать" />
   </a>
