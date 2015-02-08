@@ -2,7 +2,7 @@
 <h2 align="center">Nato vs ODKB</h2>
 <p align="center">
   <a href="https://github.com/TEHGAM/RW6/wiki">
-    <img src="http://img.shields.io/badge/Версия-3.4.4-blue.svg?style=flat"
+    <img src="http://img.shields.io/badge/Версия-1.0.0-blue.svg?style=flat"
          alt="Версия" />
   </a>
   <a href="http://www.tehgam.com/viewtopic.php?p=13735#p13735">
