@@ -20,6 +20,14 @@ Code:
 
 */
 
+if (isNull _basemarker GetVariable "BobcatScriptsCount") 
+	{_BobcatScriptsCount = 1;
+	_basemarker setVariable ["BobcatScriptsCount",_BobcatScriptsCount;];
+	}
+	Else {_BobcatScriptsCount = _BobcatScriptsCount +1;};
+
+if (_basemarker GetVariable "BobcatScriptsCount" > 1) exitWith {systemchat "Бульдозер уже подготовлен!";};
+
 private ["_basemarker","_craters","_areasize","_base"];
 
 _areasize    = _this select 0;
@@ -28,9 +36,10 @@ _basemarker   = _this select 1; //Bobcat
 //_areasize = 7; //Only in small range near Bobcat
 
 
-while {true} do 
+while {Alive _basemarker} do 
 {
  if !(Alive _basemarker) exitWith {};
+ if (BobcatScriptsCount > 10) exitWith {}; //защита от повторного вызова скрипта
  _base = getPos _basemarker; //Bobcat position 
  _craters = nearestObjects [_base, ["CraterLong"], _areasize];
    sleep 0.1;
@@ -42,7 +51,7 @@ while {true} do
       {
          private ["_crater"];
          _crater = _craters select _i;
-		 _basemarker VehicleChat "I`ve prepared the backhoe dipper. Move...";
+		 _basemarker VehicleChat "Ковш опущен, видем выбоину, продолжаем движение вокруг неё чтобы выровнять площадку...";
 		 sleep 2;
          if ( speed (_basemarker) >= 7) then 
 		   {
@@ -52,6 +61,7 @@ while {true} do
    };
    sleep 3;
 };
+
 
 /*
 Script that cleans up certain type of bombs from the given area. 
