@@ -20,7 +20,7 @@ call compile preprocessFile "IgiLoad\IgiLoadInit.sqf";
 call compile preprocessFile "grenadeStop.sqf";
 call compile preprocessFile "scripts\jump.sqf";
 
-call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf";		// BTC revive
+// call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf";		// BTC revive
 call compile preprocessFile "scripts\grenadeStop.sqf";
 call compile preprocessFile "scripts\vehicle\fastrope\zlt_fastrope.sqf";
 // call compile preprocessFile "scripts\player\init.sqf";
