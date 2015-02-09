@@ -19,10 +19,11 @@ Code:
    _cratercleaner = [7, "my_BobCat"] execVM "groundWorks.sqf"
 
 */
-
-if (isNull _basemarker GetVariable "BobcatScriptsCount") 
+_BobcatScriptsCount = 0;
+_BobcatScriptsCount = _basemarker GetVariable "BobcatScriptsCount";
+if (isNull (_basemarker GetVariable "BobcatScriptsCount")) then
 	{_BobcatScriptsCount = 1;
-	_basemarker setVariable ["BobcatScriptsCount",_BobcatScriptsCount;];
+	_basemarker setVariable ["BobcatScriptsCount", _BobcatScriptsCount];
 	}
 	Else {_BobcatScriptsCount = _BobcatScriptsCount +1;};
 
@@ -39,7 +40,7 @@ _basemarker   = _this select 1; //Bobcat
 while {Alive _basemarker} do 
 {
  if !(Alive _basemarker) exitWith {};
- if (BobcatScriptsCount > 10) exitWith {}; //защита от повторного вызова скрипта
+ if (_BobcatScriptsCount > 3) exitWith {}; //защита от повторного вызова скрипта
  _base = getPos _basemarker; //Bobcat position 
  _craters = nearestObjects [_base, ["CraterLong"], _areasize];
    sleep 0.1;
