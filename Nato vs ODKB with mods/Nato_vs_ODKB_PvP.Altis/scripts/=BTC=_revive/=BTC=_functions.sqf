@@ -1,4 +1,4 @@
-/*
+﻿/*
 Created by =BTC= Giallustio
 
 Visit us at:
@@ -104,6 +104,8 @@ BTC_set_gear =
 {
 player addEventHandler ["Возрождение", { _this execVM "scripts\player\transportCheck.sqf"; } ];
 player execVM "scripts\player\transportCheck.sqf";
+allUnits + vehicles execVM "scripts\transport\classify.sqf";
+SystemChat "=Transport Ropes= reinitialized.";
 
 	/*_gear =
 	[

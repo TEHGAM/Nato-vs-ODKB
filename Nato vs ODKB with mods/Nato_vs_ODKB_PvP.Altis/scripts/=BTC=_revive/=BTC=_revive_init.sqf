@@ -92,7 +92,7 @@ if (isServer) then {
 
 if (isDedicated) exitWith {};
 
-BTC_dragging = false;
+BTC_dragging = true;
 BTC_respawn_cond = false;
 //Init
 [] spawn {
