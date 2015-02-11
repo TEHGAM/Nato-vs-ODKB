@@ -44,7 +44,16 @@ corpseRemovalMaxTime = 120; //Max time before removal
 //Includes / Functions
 #include "scripts\VAS\menu.hpp"                   //VAS
 #include "outlw_magRepack\MagRepack_config.hpp"
-#include "scripts\taw_vd\dialog.hpp"              //TAW View Distance
+
+//TAW View Distance
+#include "taw_vd\dialog.hpp"
+
+class CfgFunctions
+{
+	
+};
+
+
 #include "scripts\vehicle\crew\common.hpp"        //vehicle crew hud
 #include "scripts\=BTC=_revive\=BTC=_respawn.h"   //BTC medic revive system
 #include "=BTC=_logistic\=BTC=_lift\=BTC=_Hud.h"  //BTC cargo system for vehicles 
