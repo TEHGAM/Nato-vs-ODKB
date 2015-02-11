@@ -15,7 +15,7 @@ SystemChat "=Transport Ropes= initialized.";
 
 while {true} do 
 {
-    sleep 180000;
+    sleep 300;
     allUnits + vehicles execVM "scripts\transport\classify.sqf";
-    SystemChat "=Transport Ropes= reinitialized.";
+    //SystemChat "=Transport Ropes= reinitialized.";
 };

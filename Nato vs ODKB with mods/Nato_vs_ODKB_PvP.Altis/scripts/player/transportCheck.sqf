@@ -5,7 +5,14 @@ _player setVariable ["CurrentTarget", objNull];
 
 while {(true)} do
 {
-//waitUntil {Alive Player};
+if (! (Alive player)) then
+	{
+	sleep 20;
+	_player = player; //if player model changed
+	waitUntil {Alive player};
+	};
+
+	sleep 0.15;
 	_vehicle = vehicle player;
 
 	if (isNull(_vehicle getVariable "AttachedVehicle")) then
