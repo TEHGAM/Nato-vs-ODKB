@@ -5693,7 +5693,7 @@ class Mission
 			azimut=-82.814301;
 			id=352;
 			side="EMPTY";
-			vehicle="RHS_Mi24P_vvsc";
+			vehicle="RHS_Mi24V_vdv";
 			skill=0.44999999;
 			init="m = [this,600,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
@@ -5748,7 +5748,7 @@ class Mission
 			azimut=-82.814301;
 			id=358;
 			side="EMPTY";
-			vehicle="RHS_Mi24P_vvsc";
+			vehicle="RHS_Mi24V_vdv";
 			skill=0.44999999;
 			init="m = [this,600,1801] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
