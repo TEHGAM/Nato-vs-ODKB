@@ -46,7 +46,7 @@ corpseRemovalMaxTime = 120; //Max time before removal
 #include "outlw_magRepack\MagRepack_config.hpp"
 
 //TAW View Distance
-#include "taw_vd\dialog.hpp"
+#include "scripts\taw_vd\dialog.hpp"              //TAW View Distance
 
 class CfgFunctions
 {
