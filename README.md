@@ -18,6 +18,7 @@
 Мы приветствуем, будем рады и благодарны за любой вклад в развитие данной версии [Nato vs ODKB](На основе работ Rarek, QuickSilver,AhoyWorld, BI Community). Вы можете помочь нам в этом оставляя свои отзывы в [частном разделе](http://www.tehgam.com/viewtopic.php?f=112&t=761) проекта на форуме TEHGAM, а также [определяя задачи](https://github.com/TEHGAM/RW6/issues) по его дальнейшему улучшению.
 
 При наличии навыков редактирования Arma 3 и желании содействовать в разработке новых миссий напрямую, Вы можете присоединиться к [её разработчикам](https://github.com/TEHGAM/RW2/graphs/contributors) делая [запросы на включение](https://github.com/TEHGAM/RW6/pulls?q=is%3Apr+is%3Aclosed) своих изменений для рассмотрения [руководителем проекта](https://github.com/a11archer).
+Язык SQF можно обрабатывать через [Notepad++](http://www.tehgam.com/viewtopic.php?f=7&t=391)
 
 [Скрипты после успешного внедрения сохранять нужно в общем доступе тут](http://www.tehgam.com/viewforum.php?f=8)
 
