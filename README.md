@@ -1,4 +1,4 @@
-<h2 align="center">NATO vs ODKB</h2>
+<h2 align="center">NATO vs CSTO</h2>
 <p align="center">
   <a href="">
     <img src="http://img.shields.io/badge/Версия-1.0.0-blue.svg?style=flat"
@@ -16,14 +16,14 @@
   </a>
 </p>
 
-Мы приветствуем, будем рады и благодарны за любой вклад в развитие миссии НАТО vs ОДКБ. Вы можете помочь нам в этом оставляя свои отзывы в [частном разделе](http://www.tehgam.com/viewtopic.php?f=112&t=761) проекта на форуме TEHGAM, а также [определяя задачи](https://github.com/TEHGAM/Nato-vs-ODKB/issues) по его дальнейшему улучшению.
+Мы приветствуем, будем рады и благодарны за любой вклад в развитие миссии NATO vs CSTO. Вы можете помочь нам в этом оставляя свои отзывы в [частном разделе](http://www.tehgam.com/viewtopic.php?f=112&t=761) проекта на форуме TEHGAM, а также [определяя задачи](https://github.com/TEHGAM/Nato-vs-ODKB/issues) по его дальнейшему улучшению.
 
 При наличии навыков редактирования Arma 3 и желании содействовать в разработке новых миссий напрямую, Вы можете присоединиться к [её разработчикам](https://github.com/TEHGAM/Nato-vs-ODKB/graphs/contributors) делая [запросы на включение](https://github.com/TEHGAM/Nato-vs-ODKB/pulls?q=is%3Apr+is%3Aclosed) своих изменений для рассмотрения [руководителем проекта](https://github.com/a11archer).
 
-Скрипты, после их успешного внедрения, просим публиковать в [общем доступе](http://www.tehgam.com/viewforum.php?f=8). Язык SQF можно обрабатывать через [Brackets](http://www.tehgam.com/viewtopic.php?p=14373#p14373)
+Скрипты, после их успешного внедрения, просим публиковать в [общем доступе](http://www.tehgam.com/viewforum.php?f=8). Язык SQF можно обрабатывать через [Brackets](http://www.tehgam.com/viewtopic.php?p=14373#p14373).
 
 ####Огромное Спасибо
-* Джек Уильямс ([Rarek](https://bitbucket.org/Rarek)) и [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI), а также сообщества [Ahoy World](http://www.ahoyworld.co.uk/) и [allFPS](http://allfps.com.au/) — за труд над исходной миссией послужившей прототипом для NATO vs ODKB. Большинство идей взято именно из их работ.
+* Джек Уильямс ([Rarek](https://bitbucket.org/Rarek)) и [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI), а также сообщества [Ahoy World](http://www.ahoyworld.co.uk/) и [allFPS](http://allfps.com.au/) — за труд над исходной миссией послужившей прототипом для NATO vs CSTO. Большинство идей взято именно из их работ.
 * [Giallustio](http://www.giallustio.altervista.org/) за скрипт [возрождения](http://www.armaholic.com/page.php?id=18955), [наказания](http://www.armaholic.com/page.php?id=19099) игроков и [логистики](http://www.armaholic.com/page.php?id=12356).
 * [BangaBob](http://forums.bistudio.com/member.php?91717-BangaBob) за [EOS](http://www.armaholic.com/page.php?id=20262) (Enemy Occupation System).
 * [Xeno](http://dev.withsix.com/users/22) за меню управления отрядами ([DOM_squad](https://github.com/TEHGAM/ADR/blob/master/Annex_Done_Right.Altis/scripts/DOM_squad)).
