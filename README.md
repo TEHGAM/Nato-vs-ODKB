@@ -20,7 +20,7 @@
 
 При наличии навыков редактирования Arma 3 и желании содействовать в разработке новых миссий напрямую, Вы можете присоединиться к [её разработчикам](https://github.com/TEHGAM/Nato-vs-ODKB/graphs/contributors) делая [запросы на включение](https://github.com/TEHGAM/Nato-vs-ODKB/pulls?q=is%3Apr+is%3Aclosed) своих изменений для рассмотрения [руководителем проекта](https://github.com/a11archer).
 
-Скрипты, после их успешного внедрения, просим публиковать в [общем доступе](http://www.tehgam.com/viewforum.php?f=8). Язык SQF можно обрабатывать через [Brackets](http://www.tehgam.com/viewtopic.php?p=14373#p14373).
+Скрипты, после их успешного внедрения, просим публиковать в [общем доступе](http://www.tehgam.com/viewforum.php?f=8). Язык [SQF](https://community.bistudio.com/wiki/SQF_syntax) можно обрабатывать через [Brackets](http://www.tehgam.com/viewtopic.php?p=14373#p14373).
 
 ####Огромное Спасибо
 * Джек Уильямс ([Rarek](https://bitbucket.org/Rarek)) и [Quiksilver](http://forums.bistudio.com/member.php?111918-MDCCLXXVI), а также сообщества [Ahoy World](http://www.ahoyworld.co.uk/) и [allFPS](http://allfps.com.au/) — за труд над исходной миссией послужившей прототипом для NATO vs CSTO. Большинство идей взято именно из их работ.
