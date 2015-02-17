@@ -1215,6 +1215,7 @@ class Mission
 					vehicle="O_soldier_exp_F";
 					player="PLAY CDG";
 					skill=1;
+					init="0 = [] execVM 'DOM_squad\group_manager.sqf'; removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_vdv_emr"";  for ""_i"" from 1 to 4 do {this addItemToUniform ""AGM_Morphine"";};  for ""_i"" from 1 to 10 do {this addItemToUniform ""AGM_Bandage"";};  this addItemToUniform ""AGM_EarBuds"";  this addItemToUniform ""AGM_DefusalKit"";  this addItemToUniform ""AGM_Clacker"";  this addItemToUniform ""AGM_CableTie"";  this addVest ""rhs_6b23_digi_engineer"";  for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_mag_rgd5"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_45Rnd_545X39_AK_Green"";};  this addItemToVest ""SmokeShellRed"";  this addItemToVest ""SmokeShellGreen"";  this addBackpack ""rhs_assault_umbts_engineer""; this addItemToBackpack ""ToolKit"";  this addHeadgear ""rhs_6b27m_digi"";  this addGoggles ""rhs_balaclava"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_ak74m_folded"";  this addWeapon ""Binocular"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";";
 					description="Искра - сапер";
 				};
 				class Item3
@@ -1226,6 +1227,7 @@ class Mission
 					vehicle="O_soldier_exp_F";
 					player="PLAY CDG";
 					skill=1;
+					init="0 = [] execVM 'DOM_squad\group_manager.sqf'; removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_vdv_emr"";  for ""_i"" from 1 to 4 do {this addItemToUniform ""AGM_Morphine"";};  for ""_i"" from 1 to 10 do {this addItemToUniform ""AGM_Bandage"";};  this addItemToUniform ""AGM_EarBuds"";  this addItemToUniform ""AGM_DefusalKit"";  this addItemToUniform ""AGM_Clacker"";  this addItemToUniform ""AGM_CableTie"";  this addVest ""rhs_6b23_digi_engineer"";  for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_mag_rgd5"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_45Rnd_545X39_AK_Green"";};  this addItemToVest ""SmokeShellRed"";  this addItemToVest ""SmokeShellGreen"";  this addBackpack ""rhs_assault_umbts_engineer""; this addItemToBackpack ""ToolKit"";  this addHeadgear ""rhs_6b27m_digi"";  this addGoggles ""rhs_balaclava"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_ak74m_folded"";  this addWeapon ""Binocular"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";";
 					description="Искра - сапер";
 				};
 				class Item4
@@ -1237,6 +1239,8 @@ class Mission
 					vehicle="O_soldier_exp_F";
 					player="PLAY CDG";
 					skill=1;
+					text="sapperrhs1";
+					init="0 = [] execVM 'DOM_squad\group_manager.sqf'; removeAllWeapons this;  removeAllItems this;  removeAllAssignedItems this;  removeUniform this;  removeVest this;  removeBackpack this;  removeHeadgear this;  removeGoggles this;    comment ""Add containers"";  this forceAddUniform ""rhs_uniform_vdv_emr"";  for ""_i"" from 1 to 4 do {this addItemToUniform ""AGM_Morphine"";};  for ""_i"" from 1 to 10 do {this addItemToUniform ""AGM_Bandage"";};  this addItemToUniform ""AGM_EarBuds"";  this addItemToUniform ""AGM_DefusalKit"";  this addItemToUniform ""AGM_Clacker"";  this addItemToUniform ""AGM_CableTie"";  this addVest ""rhs_6b23_digi_engineer"";  for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_mag_rgd5"";};  for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_45Rnd_545X39_AK_Green"";};  this addItemToVest ""SmokeShellRed"";  this addItemToVest ""SmokeShellGreen"";  this addBackpack ""rhs_assault_umbts_engineer""; this addItemToBackpack ""ToolKit"";  this addHeadgear ""rhs_6b27m_digi"";  this addGoggles ""rhs_balaclava"";    comment ""Add weapons"";  this addWeapon ""rhs_weap_ak74m_folded"";  this addWeapon ""Binocular"";    comment ""Add items"";  this linkItem ""ItemMap"";  this linkItem ""ItemCompass"";";
 					description="Искра - сапер";
 				};
 			};
@@ -7320,12 +7324,13 @@ class Mission
 		class Item386
 		{
 			position[]={20839.908,28.214134,7244.9634};
-			azimut=-126.83429;
+			azimut=-126.834;
 			id=508;
 			side="EMPTY";
 			vehicle="O_Truck_03_transport_F";
 			leader=1;
 			skill=0.60000002;
+			init="m = [this,15,300] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
 		class Item387
 		{
