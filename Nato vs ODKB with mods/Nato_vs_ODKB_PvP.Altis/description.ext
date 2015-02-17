@@ -48,10 +48,6 @@ corpseRemovalMaxTime = 120; //Max time before removal
 //TAW View Distance
 #include "scripts\taw_vd\dialog.hpp"              //TAW View Distance
 
-class CfgFunctions
-{
-	
-};
 
 
 #include "scripts\vehicle\crew\common.hpp"        //vehicle crew hud
@@ -60,13 +56,12 @@ class CfgFunctions
 #include "DOM_squad\SquadManagement.hpp"
 
 
-
 class CfgFunctions
   {
     // #include "functions\cfgfunctions.hpp"				// Integrated I&A functions
     #include "scripts\VAS\cfgfunctions.hpp"			// VAS
     #include "scripts\taw_vd\CfgFunctions.hpp"		// View distance
-
+    
     class LB {
       class forVehicles
       {
