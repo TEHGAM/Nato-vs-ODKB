@@ -26,7 +26,7 @@ sleep (random (IL_Check_Veh_Max - IL_Check_Veh_Min));
 	};
 } forEach (vehicles);
 
-cutText ["IgiLoad loaded. Have fun :)","PLAIN",2];
+SystemChat "IgiLoad started";
 
 while {true} do 
 {
