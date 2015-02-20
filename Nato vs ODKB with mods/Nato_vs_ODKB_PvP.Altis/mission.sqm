@@ -61,7 +61,8 @@ class Mission
 		"rhs_c_a2port_car",
 		"A3_Soft_F_EPC_Truck_03",
 		"A3_Soft_F_Gamma_TruckHeavy",
-		"A3_Modules_F"
+		"A3_Modules_F",
+		"rhs_c_radars"
 	};
 	addOnsAuto[]=
 	{
@@ -121,6 +122,7 @@ class Mission
 		"rhs_c_a2port_car",
 		"A3_Soft_F_EPC_Truck_03",
 		"A3_Soft_F_Gamma_TruckHeavy",
+		"rhs_c_radars",
 		"a3_map_altis"
 	};
 	randomSeed=2635349;
@@ -1548,6 +1550,7 @@ class Mission
 				items=1;
 				class Item0
 				{
+					presenceCondition="false";
 					position[]={14536.413,17.91,16719.721};
 					class args
 					{
@@ -1651,8 +1654,6 @@ class Mission
 					skill=0.60000002;
 					text="airfieldControlTwr";
 					description="Altis Airport";
-					syncId=0;
-					synchronizations[]={9,10,0};
 				};
 			};
 		};
@@ -1896,15 +1897,13 @@ class Mission
 				items=1;
 				class Item0
 				{
-					presenceCondition="false";
-					position[]={16246.003,23.655199,17270.699};
-					placement=400;
+					position[]={16084.995,15.801533,16997.629};
 					class args
 					{
 						items=15;
 						class Item0
 						{
-							value="Capture the Telos";
+							value="Capture the Telos SatLink";
 							parentCls="ModuleSector_F";
 							typeName="Name";
 						};
@@ -1946,13 +1945,13 @@ class Mission
 						};
 						class Item7
 						{
-							value="����������� ����� ������ �����.";
+							value="Телос";
 							parentCls="ModuleSector_F";
 							typeName="TaskTitle";
 						};
 						class Item8
 						{
-							value="��������� �� ������: %3";
+							value="Удерживайте узел связи. Защищайте радарные установки.";
 							parentCls="ModuleSector_F";
 							typeName="TaskDescription";
 						};
@@ -2001,6 +2000,8 @@ class Mission
 					skill=0.60000002;
 					text="telossctr";
 					description="������ ��������";
+					syncId=0;
+					synchronizations[]={9,10};
 				};
 			};
 		};
@@ -3517,7 +3518,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=436;
+		items=438;
 		class Item0
 		{
 			position[]={26711.563,19.800709,24621.908};
@@ -7913,6 +7914,29 @@ class Mission
 			vehicle="Box_East_AmmoOrd_F";
 			skill=0.60000002;
 		};
+		class Item436
+		{
+			position[]={16069.237,14.055579,16981.209};
+			azimut=665.03302;
+			id=562;
+			side="EMPTY";
+			vehicle="rhs_p37";
+			leader=1;
+			skill=1;
+			text="pradar2";
+			description="Волна Лейтенант";
+		};
+		class Item437
+		{
+			position[]={16096.816,15.364273,17016.061};
+			azimut=390.83499;
+			id=563;
+			side="EMPTY";
+			vehicle="rhs_prv13";
+			leader=1;
+			skill=1;
+			text="pradar1";
+		};
 	};
 	class Markers
 	{
@@ -8140,7 +8164,7 @@ class Mission
 	};
 	class Sensors
 	{
-		items=16;
+		items=17;
 		class Item0
 		{
 			position[]={26764.35,20.556068,24647.184};
@@ -8409,6 +8433,20 @@ class Mission
 			age="UNKNOWN";
 			name="amb2";
 			expActiv="nothing = [amb2] execVM ""boxZone.sqf"";";
+			class Effects
+			{
+			};
+		};
+		class Item16
+		{
+			position[]={16097.115,15.392071,17015.098};
+			a=5;
+			b=5;
+			rectangular=1;
+			interruptable=1;
+			age="UNKNOWN";
+			expCond="!(alive pradar1) or !(alive pradar2)";
+			expActiv="deleteVehicle telossctr;";
 			class Effects
 			{
 			};
