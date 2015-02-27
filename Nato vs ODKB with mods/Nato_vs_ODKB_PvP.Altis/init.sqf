@@ -13,7 +13,6 @@ enableSentences false;	// does this go here or
 
 if (isServer) then
 {
-call compile preprocessFile "restrictions.sqf";
 call compile preprocessFile "=BTC=_TK_punishment\=BTC=_tk_init.sqf";
 call compile preprocessFile "grenadeStop.sqf";
 call compile preprocessFile "scripts\vehicle\fastrope\zlt_fastrope.sqf";
@@ -59,6 +58,7 @@ enableSentences false;			// does this go here or initPlayerlocal.sqf?
 call compile preprocessFile "scripts\player\init.sqf";
 call compile preprocessFile "scripts\transport\init.sqf";
 call compile preprocessFile "scripts\fn_tawvd\Init.sqf";
+call compile preprocessFile "restrictions.sqf";
 
 //Отключенная локальная шняга.
 //call compile preprocessFile "taw_vd\init.sqf";
