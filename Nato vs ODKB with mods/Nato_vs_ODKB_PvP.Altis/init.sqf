@@ -14,7 +14,6 @@ enableSentences false;	// does this go here or
 if (isServer) then
 {
 call compile preprocessFile "=BTC=_TK_punishment\=BTC=_tk_init.sqf";
-call compile preprocessFile "grenadeStop.sqf";
 call compile preprocessFile "scripts\vehicle\fastrope\zlt_fastrope.sqf";
 _null = [] execVM "scripts\misc\clearBodies.sqf";														// spawn area bodies clean (performance costly)
 _null = [] execVM "scripts\misc\clearItems.sqf";
@@ -37,6 +36,7 @@ if (!isDedicated) then {
 	sidePlayer = side player;
 };
 
+call compile preprocessFile "scripts\grenadeStop.sqf";
 //------------------------------------------------- Wait until player is alive
 
 if (!isServer) exitWith {
