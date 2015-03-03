@@ -58,7 +58,7 @@ enableSentences false;			// does this go here or initPlayerlocal.sqf?
 call compile preprocessFile "scripts\player\init.sqf";
 call compile preprocessFile "scripts\transport\init.sqf";
 call compile preprocessFile "scripts\fn_tawvd\Init.sqf";
-call compile preprocessFile "restrictions.sqf";
+call compile preprocessFile "scripts\restrictions.sqf";
 
 //Отключенная локальная шняга.
 //call compile preprocessFile "taw_vd\init.sqf";

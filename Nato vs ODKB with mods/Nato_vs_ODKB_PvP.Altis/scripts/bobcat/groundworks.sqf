@@ -27,7 +27,7 @@ if (isNull (_basemarker GetVariable "BobcatScriptsCount")) then
 	}
 	Else {_BobcatScriptsCount = _BobcatScriptsCount +1;};
 
-if (_basemarker GetVariable "BobcatScriptsCount" > 1) exitWith {systemchat "Бульдозер уже подготовлен!";};
+if (_basemarker GetVariable "BobcatScriptsCount" > 1) exitWith {systemchat "Bobcat already ready!";};
 
 private ["_basemarker","_craters","_areasize","_base"];
 
@@ -52,7 +52,7 @@ while {Alive _basemarker} do
       {
          private ["_crater"];
          _crater = _craters select _i;
-		 _basemarker VehicleChat "Ковш опущен, видем выбоину, продолжаем движение вокруг неё чтобы выровнять площадку...";
+		 _basemarker VehicleChat "Move Bobcat to clear this area...";
 		 sleep 2;
          if ( speed (_basemarker) >= 7) then 
 		   {

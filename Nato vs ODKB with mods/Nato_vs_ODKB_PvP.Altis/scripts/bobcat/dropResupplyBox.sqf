@@ -17,11 +17,11 @@ if (vehicle _bobcat1 isKindof "B_APC_Tracked_01_CRV_F") then
 	_bobcat1 vehiclechat "100% done. Ready";
 	ammo1 = "Box_NATO_AmmoVeh_F" createVehicle (position _bobcat1); //creates box at position of externally given vehicle
 	ammo1 setRepairCargo 1;
-	//ammo1 setAmmoCargo 1;
+	_bobcat1 setRepairCargo 1;
+	ammo1 setAmmoCargo 1;
 	_bobcat1 setFuel 1;	
 	// _bobcat1 removeAction _dropbox;
 } else {
 	_bobcat1 VehicleChat "Sorry, there is no crane to unload the box. Use a Bobcat."; 
-	_bobcat1 removeAction aact1;
 	_bobcat1 removeAction _dropbox;
 	}; 
