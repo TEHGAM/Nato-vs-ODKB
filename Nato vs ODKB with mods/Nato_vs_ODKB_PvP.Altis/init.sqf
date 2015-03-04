@@ -59,6 +59,7 @@ call compile preprocessFile "scripts\player\init.sqf";
 call compile preprocessFile "scripts\transport\init.sqf";
 call compile preprocessFile "scripts\fn_tawvd\Init.sqf";
 call compile preprocessFile "scripts\restrictions.sqf";
+call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf"; //сломался AGM - временно запустили BTC_Revive
 
 //Отключенная локальная шняга.
 //call compile preprocessFile "taw_vd\init.sqf";
