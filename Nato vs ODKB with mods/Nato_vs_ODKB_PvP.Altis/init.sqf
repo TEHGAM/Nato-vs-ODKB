@@ -58,7 +58,8 @@ enableSentences false;			// does this go here or initPlayerlocal.sqf?
 call compile preprocessFile "scripts\player\init.sqf";
 call compile preprocessFile "scripts\transport\init.sqf";
 call compile preprocessFile "scripts\fn_tawvd\Init.sqf";
-call compile preprocessFile "scripts\restrictions.sqf";
+//call compile preprocessFile "scripts\restrictions.sqf"; //Не работает через предкомпиляцию
+_null1 = execVM "scripts\restrictions.sqf"; //Работает только на клиенте. На сервере не запускать.
 call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf"; //сломался AGM - временно запустили BTC_Revive
 
 //Отключенная локальная шняга.
