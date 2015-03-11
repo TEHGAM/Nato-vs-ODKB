@@ -15,8 +15,10 @@ _________________________________________________*/
 #define AT_MSG "Only AT and AA Soldiers may use this weapon system. Launcher removed."
 #define SNIPER_MSG "Only Snipers may use this weapon system. Sniper rifle removed."
 #define AUTOTUR_MSG "You are not allowed to use this weapon system, Backpack removed."
-#define UAV_MSG "Only officer at Lieutenant rank may use this Item, UAV terminal removed."
-
+#define UAV_MSG "Only officer at Lieutenant rank may use UAV terminal. Item removed."
+#define Designator_MSG "Only officer at Lieutenant rank may use Laser Designator. Item removed."
+#define Attachements_MSG "Only Lieutenent can use such expensive items as thermal optics.";
+//UAV_MSG = localize "str_UAV_terminal_cannot";
 while { true } do {
 
 	//------------------------------------- Launchers
@@ -46,6 +48,7 @@ while { true } do {
 	_uavOperator = ["rhs_vdv_officer","rhsusf_army_ucp_teamleader"];
    	_uavRestricted = ["B_UavTerminal","O_UavTerminal","I_UavTerminal"];
     _assignedItems = assignedItems player;
+	//_attachments = primaryWeaponItems player;
 
 	if (({"B_UavTerminal" == _x} count _assignedItems) > 0) then {
 		if (({player isKindOf _x} count _uavOperator) < 1) then {
@@ -54,7 +57,33 @@ while { true } do {
 			titleText [UAV_MSG,"PLAIN",3];
 		};
 	};
+if ( player hasWeapon "Laserdesignator") then 
+{ 
+	if ((typeOf Player != "rhs_vdv_officer_armored") && (typeOf Player != "rhsusf_army_ucp_teamleader")) then 
+	{
+	Player removeWeapon "Laserdesignator";
+	titleText [Designator_MSG,"PLAIN",3];
+	};
+	
+};
+//_restrictedAttachments = ["optic_Nightstalker","optic_tws","optic_tws_mg"];  
+if (("optic_Nightstalker" in PrimaryWeaponItems player) && (Rank Player != "MAJOR") && (Rank Player != "COLONEL")) then
+{
+	player removePrimaryWeaponItem "optic_Nightstalker";
+	titleText ["Nightstalker item is not allowed below Major Rank!","PLAIN",3];
+};
 
+if (("optic_tws" in PrimaryWeaponItems player) && (Rank Player != "CAPTAIN") && (Rank Player != "MAJOR") && (Rank Player != "COLONEL")) then
+{
+	player removePrimaryWeaponItem "optic_tws";
+	titleText ["TWS item is not allowed below Captain rank!","PLAIN",3];
+};
+
+if (("optic_tws_mg" in PrimaryWeaponItems player) && (Rank Player != "LIEUTENANT") && (Rank Player != "CAPTAIN") && (Rank Player != "MAJOR") && (Rank Player != "COLONEL")) then
+{
+	player removePrimaryWeaponItem "optic_tws_mg";
+	titleText ["TWS Mg item is not allowed below Lieutenant rank!","PLAIN",3];
+};
 	//------------------------------------- turret backpacks
 
 	_backpackRestricted = [

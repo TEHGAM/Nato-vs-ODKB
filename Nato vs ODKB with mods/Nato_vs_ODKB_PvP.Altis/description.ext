@@ -1,7 +1,7 @@
 ﻿//On Load
 author = www.TehGam.com;
 onLoadName = "NATO vs ODKB";
-OnLoadMission = "[Редакция от сообщества TEHGAM, вер.1]";
+OnLoadMission = "[Редакция от сообщества TEHGAM, вер. 2.0]";
 loadScreen = "media\images\loading.paa";
 overviewPicture = "media\images\loading.paa";
 onLoadIntro = "";           //Displays a message while the intro is loading.
@@ -30,7 +30,7 @@ joinUnassigned = 1;       //0 = players forced into role on join
 
 //Respawn
 Respawn = 3;        //0 = none. 1 = bird. 2 = instant where died. 3 = base or respawn_west marker. 4 = respawn with team, or bird. 5 = into AI or bird.
-RespawnDelay = 15;   //Delay prior to respawn, ensure longer than BTC revive delay.
+RespawnDelay = 35;   //Delay prior to respawn, ensure longer than BTC revive delay.
 RespawnDialog = 1;  //Default = 1. show respawn timer and scoreboard when killed.
 
 //Garbage collector
@@ -51,7 +51,7 @@ corpseRemovalMaxTime = 120; //Max time before removal
 
 
 #include "scripts\vehicle\crew\common.hpp"        //vehicle crew hud
-#include "scripts\=BTC=_revive\=BTC=_respawn.h"   //BTC medic revive system
+//#include "scripts\=BTC=_revive\=BTC=_respawn.h"   //BTC medic revive system
 #include "=BTC=_logistic\=BTC=_lift\=BTC=_Hud.h"  //BTC cargo system for vehicles 
 #include "DOM_squad\SquadManagement.hpp"
 
