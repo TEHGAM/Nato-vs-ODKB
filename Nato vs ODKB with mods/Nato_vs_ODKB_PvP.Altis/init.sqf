@@ -51,16 +51,15 @@ if (!isServer) exitWith {
 
 
 call compile preprocessFile "IgiLoad\IgiLoadInit.sqf";
+//_null1 = [] execVM "scripts\restrictions.sqf"; //Работает только на клиенте. На сервере не запускать. На карте поставил во флаге.
 call compile preprocessFile "scripts\jump.sqf";
 call compile preprocessFile "=BTC=_logistic\=BTC=_logistic_init.sqf";
 enableSaving [false, false];		
-enableSentences false;			// does this go here or initPlayerlocal.sqf?	
 call compile preprocessFile "scripts\player\init.sqf";
 call compile preprocessFile "scripts\transport\init.sqf";
-call compile preprocessFile "scripts\fn_tawvd\Init.sqf";
-//call compile preprocessFile "scripts\restrictions.sqf"; //Не работает через предкомпиляцию
-_null1 = execVM "scripts\restrictions.sqf"; //Работает только на клиенте. На сервере не запускать.
-call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf"; //сломался AGM - временно запустили BTC_Revive
+call compile preprocessFile "scripts\taw_vd\fn_tawvdInit.sqf";
+//call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf"; //временно запускали вместо AGM -  BTC_Revive
+enableSentences false;			// does this go here or initPlayerlocal.sqf?	
 
 //Отключенная локальная шняга.
 //call compile preprocessFile "taw_vd\init.sqf";
@@ -88,3 +87,4 @@ call compile preprocessFile "scripts\=BTC=_revive\=BTC=_revive_init.sqf"; //сл
 //Запускается и на сервере и на клиенте.
 // _transportSqf = [] execVM "scripts\transport\init.sqf";
 // _transportInit = [] execVM "scripts\player\init.sqf";
+_null = [] execVM "scripts\tgfastrope\tgfastrope_init.sqf";
