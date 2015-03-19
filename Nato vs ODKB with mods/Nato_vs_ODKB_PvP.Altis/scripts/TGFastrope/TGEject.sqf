@@ -25,7 +25,6 @@ _prepare = Player addAction
 	}
 ];
 Player setVariable ["prepare", _prepare];
-//Player removeAction act1; тут заменить на GetVariable!!!!!
 _ropeCut = Player GetVariable "ropeCut";
 If ! isNull (_ropeCut) then 
 	{
