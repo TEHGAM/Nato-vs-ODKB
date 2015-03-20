@@ -5322,7 +5322,7 @@ class Mission
 			azimut=95.411903;
 			id=350;
 			side="EMPTY";
-			vehicle="RHS_Mi8mt_vvsc";
+			vehicle="RHS_Mi8mt_Cargo_vvs";
 			skill=0.44999999;
 			text="mi8mt1";
 			init="m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";
@@ -5333,7 +5333,7 @@ class Mission
 			azimut=278.03101;
 			id=351;
 			side="EMPTY";
-			vehicle="RHS_Mi8mt_vvsc";
+			vehicle="RHS_Mi8mt_Cargo_vvs";
 			skill=0.44999999;
 			text="mi8mt2";
 			init="m = [this,60,300] execVM ""scripts\vehicle\monitor.sqf"";";

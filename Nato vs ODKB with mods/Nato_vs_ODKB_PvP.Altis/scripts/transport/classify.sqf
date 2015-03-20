@@ -26,7 +26,7 @@
 				[_x, 3, [0,2,-10]] execVM "scripts\transport\fn_SetupTransport.sqf";			
 			};
 
-			case "RHS_Mi8mt_vvsc":
+			case "RHS_Mi8mt_Cargo_vvs":
 			{
 				[_x, 3, [0,2,-10]] execVM "scripts\transport\fn_SetupTransport.sqf";			
 			}; 
