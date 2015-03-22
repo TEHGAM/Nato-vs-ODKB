@@ -1,4 +1,3 @@
-if (player == (driver vehicle player)) exitWith {systemChat "Driver cant fastrope";};
 Player action ["Eject", vehicle Player];
 //Player switchMove "Acts_SittingWounded_breath";
 
@@ -7,7 +6,8 @@ Player action ["Eject", vehicle Player];
 	_rope0 = Player getVariable "myRope";
 	ropedestroy _rope0; 
 //	};
-_rope0 = ropeCreate [vehicle Player, [1.5, 2, -1], Player, [0, -0.02, 1.2], 10, 5, true];
+_rope0 = ropeCreate [vehicle Player, [(1.5 * random1), 2, -1], Player, [0, -0.02, 1.2], 10, 5, true];
+random1 = random1 * (-1);
 Player setVariable ["myRope", _rope0];
 ropeUnwind [_rope0, 2.7, (position vehicle Player select 2) + 5, true]; 
 
@@ -32,14 +32,13 @@ _ropeCut = Player GetVariable "ropeCut";
 	Player removeAction _ropeCut;
 //	};
 _ropeCut = Player addAction 
-["Rope up", 
+["Cut Rope", 
 	{
 	//Ropecut [Player getVariable "myRope", 8,false]; 
 	//ropeUnwind [(Player getVariable "myRope"), -4, 45, true]; 
 	Player removeAction (Player getVariable "ropeCut");
-	ropeunwind [(player getVariable "myRope"), 6, - 300, true];
-    sleep 10;
-	ropedestroy (Player getVariable "myRope");
-    }
+	sleep 30;
+	ropedestroy Player getVariable "myRope";
+	}
 ];
 player SetVariable ["ropeCut", _ropeCut];
