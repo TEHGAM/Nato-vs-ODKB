@@ -35,7 +35,9 @@ _ropeCut = Player addAction
 ["Cut Rope", 
 	{
 	//Ropecut [Player getVariable "myRope", 8,false]; 
-	//ropeUnwind [(Player getVariable "myRope"), -4, 45, true]; 
+	ropeunwind [(player getVariable "myRope"), 6, - 300, true];
+    sleep 10;
+	ropedestroy (Player getVariable "myRope"); 
 	Player removeAction (Player getVariable "ropeCut");
 	sleep 30;
 	ropedestroy Player getVariable "myRope";
