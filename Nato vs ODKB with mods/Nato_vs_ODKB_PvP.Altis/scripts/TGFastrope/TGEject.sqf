@@ -4,7 +4,7 @@ Player action ["Eject", vehicle Player];
 //If !(isNull ( Player getVariable "myRope")) then 
 //	{
 	_rope0 = Player getVariable "myRope";
-	ropedestroy _rope0; 
+	ropedestroy _rope0;
 //	};
 _rope0 = ropeCreate [vehicle Player, [(1.5 * random1), 2, -1], Player, [0, -0.02, 1.2], 10, 5, true];
 random1 = random1 * (-1);
