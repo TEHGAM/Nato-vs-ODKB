@@ -29,9 +29,14 @@ joinUnassigned = 1;       //0 = players forced into role on join
 //showUAVFeed = 0;        //Enables/Disables the UAV Feed. Zeus-related.
 
 //Respawn
-Respawn = 3;        //0 = none. 1 = bird. 2 = instant where died. 3 = base or respawn_west marker. 4 = respawn with team, or bird. 5 = into AI or bird.
-RespawnDelay = 35;   //Delay prior to respawn, ensure longer than BTC revive delay.
-RespawnDialog = 1;  //Default = 1. show respawn timer and scoreboard when killed.
+//Respawn = 3;        //0 = none. 1 = bird. 2 = instant where died. 3 = base or respawn_west marker. 4 = respawn with team, or bird. 5 = into AI or bird.
+//RespawnDelay = 35;   //Delay prior to respawn, ensure longer than BTC revive delay.
+//RespawnDialog = 1;  //Default = 1. show respawn timer and scoreboard when killed.
+Respawn = 3;
+RespawnDelay = 45;
+respawnTemplates[] = {"Revive", "MenuPosition"};
+//respawnOnStart = -1;
+RespawnDialog = 1;
 
 //Garbage collector
 wreckLimit = 3;             //Limit before removal is triggered
@@ -51,7 +56,7 @@ corpseRemovalMaxTime = 120; //Max time before removal
 
 
 #include "scripts\vehicle\crew\common.hpp"        //vehicle crew hud
-#include "scripts\=BTC=_revive\=BTC=_respawn.h"   //BTC medic revive system
+//#include "scripts\=BTC=_revive\=BTC=_respawn.h"   //BTC medic revive system
 #include "=BTC=_logistic\=BTC=_lift\=BTC=_Hud.h"  //BTC cargo system for vehicles 
 #include "DOM_squad\SquadManagement.hpp"
 
