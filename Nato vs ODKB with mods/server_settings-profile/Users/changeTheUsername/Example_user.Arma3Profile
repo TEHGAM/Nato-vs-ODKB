@@ -1,0 +1,126 @@
+singleVoice=0;
+maxSamplesPlayed=96;
+sceneComplexity=1000000;
+shadowZDistance=100;
+viewDistance=1000;
+preferredObjectViewDistance=1000;
+terrainGrid=3.125;
+volumeCD=10;
+volumeFX=10;
+volumeSpeech=10;
+volumeVoN=10;
+vonRecThreshold=0.029999999;
+
+class Difficulties
+{
+    class recruit
+    {
+        class Flags
+        {
+            Armor=0;
+            FriendlyTag=1;
+            EnemyTag=0;
+            MineTag=1;
+            HUD=1;
+            HUDPerm=1;
+            HUDWp=1;
+            HUDWpPerm=1;
+            HUDGroupInfo=1;
+            AutoSpot=1;
+            Map=1;
+            WeaponCursor=0;
+            AutoGuideAT=0;
+            ClockIndicator=1;
+            3rdPersonView=0;
+            UltraAI=0;
+            CameraShake=0;
+            UnlimitedSaves=0;
+            DeathMessages=1;
+            NetStats=1;
+            VonID=1;
+            ExtendetInfoType=1;
+        };
+        skillFriendly=0.6;
+        skillEnemy=0.6;
+        precisionFriendly=0.28;
+        precisionEnemy=0.28;
+    };
+    class regular
+    {
+        class Flags
+        {
+            Armor=0;
+            FriendlyTag=0;
+            EnemyTag=0;
+            MineTag=0;
+            HUD=1;
+            HUDPerm=1;
+            HUDWp=1;
+            HUDWpPerm=1;
+            HUDGroupInfo=1;
+            AutoSpot=0;
+            Map=1;
+            WeaponCursor=0;
+            AutoGuideAT=0;
+            ClockIndicator=1;
+            3rdPersonView=0;
+            UltraAI=0;
+            CameraShake=0;
+            UnlimitedSaves=0;
+            DeathMessages=1;
+            NetStats=1;
+            VonID=1;
+            ExtendetInfoType=1;
+        };
+        skillFriendly=0.6;
+        skillEnemy=0.6;
+        precisionFriendly=0.28;
+        precisionEnemy=0.28;
+    };
+    class veteran
+    {
+        class Flags
+        {
+            Armor=0;
+            FriendlyTag=0;
+            EnemyTag=0;
+            MineTag=0;
+            HUD=1;
+            HUDWp=1;
+            HUDWpPerm=1;
+            HUDGroupInfo=1;
+            AutoSpot=0;
+            WeaponCursor=0;
+            ClockIndicator=1;
+            3rdPersonView=0;
+            UltraAI=0;
+            CameraShake=0;
+            DeathMessages=0;
+            NetStats=1;
+            VonID=1;
+            ExtendetInfoType=0;
+        };
+        skillFriendly=0.6;
+        skillEnemy=0.6;
+        precisionFriendly=0.28;
+        precisionEnemy=0.28;
+    };
+    class mercenary
+    {
+        class Flags
+        {
+            HUD=1;
+            AutoSpot=0;
+            WeaponCursor=0;
+            DeathMessages=0;
+            NetStats=1;
+            VonID=1;
+        };
+        skillFriendly=0.6;
+        skillEnemy=0.6;
+        precisionFriendly=0.28;
+        precisionEnemy=0.28;
+    };
+};
+
+difficulty="veteran";
