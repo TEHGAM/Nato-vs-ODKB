@@ -1,7 +1,7 @@
 ﻿//On Load
 author = www.TehGam.com;
 onLoadName = "NATO vs ODKB";
-OnLoadMission = "[Редакция от сообщества TEHGAM, вер. 2.0]";
+OnLoadMission = "[Редакция от сообщества TEHGAM, вер. 3.1]";
 loadScreen = "media\images\loading.paa";
 overviewPicture = "media\images\loading.paa";
 onLoadIntro = "";           //Displays a message while the intro is loading.
