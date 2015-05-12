@@ -7,9 +7,9 @@ while {(true)} do
 {
 if (! (Alive player)) then
 	{
-	sleep 20;
-	_player = player; //if player model changed
+	sleep 0.5;
 	waitUntil {Alive player};
+	_player = player; //if player model changed
 	};
 
 	sleep 0.15;
