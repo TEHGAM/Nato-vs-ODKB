@@ -74,7 +74,6 @@ class Mission
 		"peral_airfield_logistics",
 		"peral_airfield_logistics_arma_air",
 		"ace_medical",
-		"ace_explosives",
 		"ace_map",
 		"ace_microdagr",
 		"ace_nametags"
@@ -99,7 +98,6 @@ class Mission
 		"peral_airfield_logistics",
 		"TTT_NimitzBoat",
 		"ace_medical",
-		"ace_explosives",
 		"ace_map",
 		"ace_microdagr",
 		"ace_nametags",
@@ -134,8 +132,6 @@ class Mission
 		"A3_Soft_F_HEMTT",
 		"rhs_c_2s3",
 		"A3_armor_f_beta_APC_Tracked_02",
-		"A3_Air_F_EPC_Plane_CAS_01",
-		"peral_airfield_logistics_arma_air",
 		"JS_JC_FA18",
 		"globemaster_c17",
 		"rhs_c_cars",
@@ -4076,40 +4072,6 @@ class Mission
 				items=1;
 				class Item0
 				{
-					position[]={26677.588,18.204941,24645.779};
-					class args
-					{
-						items=2;
-						class Item0
-						{
-							value="0";
-							parentCls="ACE_ModuleExplosive";
-							typeName="RequireSpecialist";
-						};
-						class Item1
-						{
-							value="1";
-							parentCls="ACE_ModuleExplosive";
-							typeName="PunishNonSpecialists";
-						};
-					};
-					id=146;
-					side="LOGIC";
-					vehicle="ACE_ModuleExplosive";
-					leader=1;
-					lock="UNLOCKED";
-					skill=0.60000002;
-				};
-			};
-		};
-		class Item73
-		{
-			side="LOGIC";
-			class Vehicles
-			{
-				items=1;
-				class Item0
-				{
 					position[]={26677.721,18.501947,24641.301};
 					class args
 					{
@@ -4139,7 +4101,7 @@ class Mission
 							typeName="MapShowCursorCoordinates";
 						};
 					};
-					id=147;
+					id=146;
 					side="LOGIC";
 					vehicle="ACE_ModuleMap";
 					leader=1;
@@ -4148,7 +4110,7 @@ class Mission
 				};
 			};
 		};
-		class Item74
+		class Item73
 		{
 			side="LOGIC";
 			class Vehicles
@@ -4167,7 +4129,7 @@ class Mission
 							typeName="MapDataAvailable";
 						};
 					};
-					id=148;
+					id=147;
 					side="LOGIC";
 					vehicle="ace_microdagr_dagrModule";
 					leader=1;
@@ -4176,7 +4138,7 @@ class Mission
 				};
 			};
 		};
-		class Item75
+		class Item74
 		{
 			side="LOGIC";
 			class Vehicles
@@ -4213,7 +4175,7 @@ class Mission
 							typeName="showCursorTagForVehicles";
 						};
 					};
-					id=149;
+					id=148;
 					side="LOGIC";
 					vehicle="ACE_ModuleNameTags";
 					leader=1;
@@ -4222,7 +4184,7 @@ class Mission
 				};
 			};
 		};
-		class Item76
+		class Item75
 		{
 			side="LOGIC";
 			class Vehicles
@@ -4247,11 +4209,30 @@ class Mission
 							typeName="enabled";
 						};
 					};
-					id=150;
+					id=149;
 					side="LOGIC";
 					vehicle="ACE_moduleAssignMedicVehicle";
 					leader=1;
 					lock="UNLOCKED";
+					skill=0.60000002;
+				};
+			};
+		};
+		class Item76
+		{
+			side="WEST";
+			class Vehicles
+			{
+				items=1;
+				class Item0
+				{
+					position[]={26746.92,20.638756,24609.502};
+					azimut=-49.423801;
+					id=150;
+					side="WEST";
+					vehicle="rhsusf_army_ocp_rifleman_1stcav";
+					player="PLAYER COMMANDER";
+					leader=1;
 					skill=0.60000002;
 				};
 			};
@@ -6767,7 +6748,7 @@ class Mission
 			azimut=-49.423801;
 			id=395;
 			side="EMPTY";
-			vehicle="B_Plane_CAS_01_F";
+			vehicle="RHS_A10";
 			skill=0.60000002;
 			init="m = [this,1800,300] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
@@ -6777,7 +6758,7 @@ class Mission
 			azimut=-49.423801;
 			id=396;
 			side="EMPTY";
-			vehicle="B_Plane_CAS_01_F";
+			vehicle="RHS_A10";
 			skill=0.60000002;
 			init="m = [this,1800,300] execVM ""scripts\vehicle\monitor.sqf"";";
 		};
@@ -8961,7 +8942,7 @@ class Mission
 	};
 	class Markers
 	{
-		items=40;
+		items=39;
 		class Item0
 		{
 			position[]={26704.996,19.901009,24614.668};
@@ -9008,13 +8989,6 @@ class Mission
 		};
 		class Item6
 		{
-			position[]={26694.572,19.133047,24649.076};
-			name="respawn_west_2";
-			type="mil_flag";
-			colorName="ColorBlue";
-		};
-		class Item7
-		{
 			position[]={26825.381,23.794315,24580.816};
 			name="ammocargo";
 			text="Ammoboxes for: Bobcat";
@@ -9022,7 +8996,7 @@ class Mission
 			colorName="ColorWEST";
 			angle=448.81699;
 		};
-		class Item8
+		class Item7
 		{
 			position[]={26888.029,20.271431,24715.398};
 			name="mrk_LineBackers";
@@ -9030,14 +9004,14 @@ class Mission
 			type="mil_marker";
 			colorName="ColorBlue";
 		};
-		class Item9
+		class Item8
 		{
 			position[]={21119.266,19.8692,7518.4365};
 			name="heliService1_1_1";
 			text="Ремонт вертолётов";
 			type="b_maint";
 		};
-		class Item10
+		class Item9
 		{
 			position[]={20937.4,25.424725,7338.5347};
 			name="heliService2_1_1";
@@ -9045,7 +9019,7 @@ class Mission
 			type="b_maint";
 			angle=-173.26184;
 		};
-		class Item11
+		class Item10
 		{
 			position[]={18288.559,47.462727,15533.2};
 			name="heliService2_1_2";
@@ -9053,7 +9027,7 @@ class Mission
 			type="b_maint";
 			angle=-135.27536;
 		};
-		class Item12
+		class Item11
 		{
 			position[]={17866.887,2.3950684,18196.9};
 			name="heliService2_1_2_1";
@@ -9061,7 +9035,7 @@ class Mission
 			type="b_maint";
 			angle=-99.386116;
 		};
-		class Item13
+		class Item12
 		{
 			position[]={14199.212,29.544636,18711.883};
 			name="heliService2_1_2_2";
@@ -9069,7 +9043,7 @@ class Mission
 			type="b_maint";
 			angle=-135.27536;
 		};
-		class Item14
+		class Item13
 		{
 			position[]={14401.434,19.26833,16308.676};
 			name="heliService1_1_2";
@@ -9077,7 +9051,7 @@ class Mission
 			type="b_maint";
 			angle=1.6017224;
 		};
-		class Item15
+		class Item14
 		{
 			position[]={14343.396,18.86375,16323.093};
 			name="heliService1_1_2_1";
@@ -9085,7 +9059,7 @@ class Mission
 			type="b_maint";
 			angle=0.37768909;
 		};
-		class Item16
+		class Item15
 		{
 			position[]={14242.229,20.174816,16228.411};
 			name="heliService1_1_2_2";
@@ -9093,7 +9067,7 @@ class Mission
 			type="b_maint";
 			angle=0.47967762;
 		};
-		class Item17
+		class Item16
 		{
 			position[]={14162.339,20.526726,16192.453};
 			name="heliService1_1_2_3";
@@ -9101,7 +9075,7 @@ class Mission
 			type="b_maint";
 			angle=-0.019217527;
 		};
-		class Item18
+		class Item17
 		{
 			position[]={15191.148,17.924368,17302.873};
 			name="heliService2_1_2_1_1";
@@ -9109,7 +9083,7 @@ class Mission
 			type="b_maint";
 			angle=-180.74927;
 		};
-		class Item19
+		class Item18
 		{
 			position[]={14187.625,19.59,16267.817};
 			name="ammoAirfield1";
@@ -9117,7 +9091,7 @@ class Mission
 			type="mil_marker";
 			colorName="ColorBlue";
 		};
-		class Item20
+		class Item19
 		{
 			position[]={15188.222,17.930964,17284.6};
 			name="ammoODKBAirfield";
@@ -9125,7 +9099,7 @@ class Mission
 			type="mil_marker";
 			colorName="ColorRed";
 		};
-		class Item21
+		class Item20
 		{
 			position[]={26770.736,19.970186,24673.248};
 			name="tanksmrk";
@@ -9133,7 +9107,7 @@ class Mission
 			type="mil_circle";
 			colorName="ColorBlue";
 		};
-		class Item22
+		class Item21
 		{
 			position[]={27123.342,24.505014,24975.223};
 			name="mnaircraft";
@@ -9141,7 +9115,7 @@ class Mission
 			type="n_plane";
 			colorName="ColorBlue";
 		};
-		class Item23
+		class Item22
 		{
 			position[]={26997.324,21.416174,24823.338};
 			name="ahelimrk";
@@ -9149,7 +9123,7 @@ class Mission
 			type="b_air";
 			colorName="ColorBlue";
 		};
-		class Item24
+		class Item23
 		{
 			position[]={26879.867,25.861895,24509.441};
 			name="ATplanesmrk";
@@ -9157,7 +9131,7 @@ class Mission
 			type="o_plane";
 			colorName="ColorBlue";
 		};
-		class Item25
+		class Item24
 		{
 			position[]={20904.508,28.603868,7220.5684};
 			name="ammocargo_1";
@@ -9166,7 +9140,7 @@ class Mission
 			colorName="ColorWEST";
 			angle=448.81699;
 		};
-		class Item26
+		class Item25
 		{
 			position[]={21006.754,24.325041,7232.1021};
 			name="Red";
@@ -9177,7 +9151,7 @@ class Mission
 			a=1000;
 			b=1000;
 		};
-		class Item27
+		class Item26
 		{
 			position[]={26771.148,20.814846,24642.193};
 			name="Blue";
@@ -9188,7 +9162,7 @@ class Mission
 			a=1000;
 			b=1000;
 		};
-		class Item28
+		class Item27
 		{
 			position[]={12855.676,85.523193,16739.172};
 			name="heliService1_1_2_2_1";
@@ -9197,7 +9171,7 @@ class Mission
 			colorName="ColorOrange";
 			angle=-88.938698;
 		};
-		class Item29
+		class Item28
 		{
 			position[]={18788.063,0.15760486,19391.85};
 			name="lchmrk1";
@@ -9206,7 +9180,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=17.510401;
 		};
-		class Item30
+		class Item29
 		{
 			position[]={18321.203,-0.11057924,19541.986};
 			name="lchmrk1_1";
@@ -9215,7 +9189,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=95.984039;
 		};
-		class Item31
+		class Item30
 		{
 			position[]={14012.622,-0.0028337459,12140.981};
 			name="lchmrk1_2";
@@ -9224,7 +9198,7 @@ class Mission
 			colorName="ColorRed";
 			angle=-0.32801899;
 		};
-		class Item32
+		class Item31
 		{
 			position[]={22346.107,-0.037596904,6371.1729};
 			name="lchmrk1_2_1_1";
@@ -9233,7 +9207,7 @@ class Mission
 			colorName="ColorRed";
 			angle=360.28091;
 		};
-		class Item33
+		class Item32
 		{
 			position[]={26448.1,-0.093214229,25128.773};
 			name="lchmrk1_3";
@@ -9242,7 +9216,7 @@ class Mission
 			colorName="ColorBlue";
 			angle=1.7621883;
 		};
-		class Item34
+		class Item33
 		{
 			position[]={18700.154,-0.19823901,20170.686};
 			name="USSmrk";
@@ -9250,7 +9224,7 @@ class Mission
 			type="respawn_naval";
 			colorName="ColorBlue";
 		};
-		class Item35
+		class Item34
 		{
 			position[]={20046.506,17.696352,20024.543};
 			name="heliService2_1_2_3";
@@ -9258,7 +9232,7 @@ class Mission
 			type="b_maint";
 			angle=-169.30582;
 		};
-		class Item36
+		class Item35
 		{
 			position[]={14117.345,-64.319984,12078.186};
 			name="AAC4200sto";
@@ -9269,7 +9243,7 @@ class Mission
 			a=2200;
 			b=2200;
 		};
-		class Item37
+		class Item36
 		{
 			position[]={18543.844,-0.10977959,19503.07};
 			name="AAnato";
@@ -9280,7 +9254,7 @@ class Mission
 			a=2600;
 			b=2100;
 		};
-		class Item38
+		class Item37
 		{
 			position[]={22259.139,0.048226409,6401.6177};
 			name="AAC4200sto2";
@@ -9291,7 +9265,7 @@ class Mission
 			a=2200;
 			b=2200;
 		};
-		class Item39
+		class Item38
 		{
 			position[]={26458.803,0.068432853,25253.422};
 			name="SAMnato2";
