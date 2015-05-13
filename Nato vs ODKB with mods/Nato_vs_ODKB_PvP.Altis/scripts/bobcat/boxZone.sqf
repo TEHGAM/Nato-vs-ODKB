@@ -10,7 +10,7 @@ if (vehicle _bobcat1 isKindof "B_APC_Tracked_01_CRV_F") then
 
 _action = _bobcat1 getVariable "Bobcataction";
 _bobcat1 vehicleChat("loading Vehicle Box");
-_bobcat1 removeAction _action;
+if (! isNil {_action}) then { _bobcat1 removeAction _action};
 _bobcat1 setFuel 0;
 	sleep 1;
 _bobcat1 vehiclechat "40% done";
@@ -21,7 +21,7 @@ _action = _bobcat1 addAction ["<t color='#FF8000'>Drop vehicle ammobox.</t>","sc
 _bobcat1 setVariable ["Bobcataction", _action];
 _bobcat1 vehiclechat "100% done. Ready";
 _bobcat1 setFuel 1;
-cratercleaner = [7, _bobcat1] execVM "scripts\bobcat\groundWorks.sqf";
+cratercleaner = [12, _bobcat1] execVM "scripts\bobcat\groundWorks.sqf";
 } ELSE
 { _bobcat1 vehiclechat "Sorry there no any crane. Only Bobcat type Vehicle supported to load a box."};
 	

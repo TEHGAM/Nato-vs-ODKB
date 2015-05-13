@@ -17,17 +17,9 @@ Code:
    
    Example;
    _cratercleaner = [7, "my_BobCat"] execVM "groundWorks.sqf"
+_basemarker is a Bobcat object that will be the point of clearence.
 
 */
-_BobcatScriptsCount = 0;
-_BobcatScriptsCount = _basemarker GetVariable "BobcatScriptsCount";
-if (isNull (_basemarker GetVariable "BobcatScriptsCount")) then
-	{_BobcatScriptsCount = 1;
-	_basemarker setVariable ["BobcatScriptsCount", _BobcatScriptsCount];
-	}
-	Else {_BobcatScriptsCount = _BobcatScriptsCount +1;};
-
-if (_basemarker GetVariable "BobcatScriptsCount" > 1) exitWith {systemchat "Bobcat already ready!";};
 
 private ["_basemarker","_craters","_areasize","_base"];
 
@@ -37,17 +29,22 @@ _basemarker   = _this select 1; //Bobcat
 //_areasize = 7; //Only in small range near Bobcat
 
 
+//isNil {variable} (true\false) checks that the variable is not defined : when its true!!
+if ( ! isNil { _basemarker GetVariable "BobcatScriptsCount"} ) exitWith {systemchat "Bobcat already ready!";};
+_BobcatScriptsCount = "bobcatReady"; //isNill working only with string type variables or Code https://community.bistudio.com/wiki/isNil
+_basemarker setVariable ["BobcatScriptsCount", _BobcatScriptsCount]; //define that script is already running for that bobcat
+
+
 while {Alive _basemarker} do 
 {
  if !(Alive _basemarker) exitWith {};
- if (_BobcatScriptsCount > 3) exitWith {}; //защита от повторного вызова скрипта
  _base = getPos _basemarker; //Bobcat position 
  _craters = nearestObjects [_base, ["CraterLong"], _areasize];
    sleep 0.1;
    
    if (count _craters > 0) then
    {
-   SystemChat (format ["Craters = %1",count _craters]);
+   _basemarker VehicleChat (format ["Craters = %1",count _craters]);
       for "_i" from 0 to ((count _craters) - 1) do
       {
          private ["_crater"];
