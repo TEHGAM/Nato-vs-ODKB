@@ -18,7 +18,7 @@ sleep 2;
 _bobcat1 vehiclechat "75% done";
 sleep 3;
 _action = _bobcat1 addAction ["<t color='#FF8000'>Drop vehicle ammobox.</t>","scripts\bobcat\dropResupplyBox.sqf", _bobcat1];
-_bobcat1 setVariable ["Bobcataction", _action1];
+_bobcat1 setVariable ["Bobcataction", _action];
 _bobcat1 vehiclechat "100% done. Ready";
 _bobcat1 setFuel 1;
 cratercleaner = [7, _bobcat1] execVM "scripts\bobcat\groundWorks.sqf";
