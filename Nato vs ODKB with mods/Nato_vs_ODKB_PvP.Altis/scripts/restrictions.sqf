@@ -20,7 +20,7 @@ _________________________________________________*/
 #define Attachements_MSG "Only Lieutenent can use such expensive items as thermal optics.";
 //UAV_MSG = localize "str_UAV_terminal_cannot";
 while { true } do {
-
+waitUntil {alive Player};
 	//------------------------------------- Launchers
 
 	if ((player hasWeapon "launch_NLAW_F") || (player hasWeapon "launch_B_Titan_F") || (player hasWeapon "launch_O_Titan_F") || (player hasWeapon "launch_I_Titan_F") || (player hasWeapon "launch_B_Titan_short_F") || (player hasWeapon "launch_O_Titan_short_F") || (player hasWeapon "launch_I_Titan_short_F") || (player hasWeapon "rhs_weap_fgm148") || (player hasWeapon "rhs_weap_fim92") || (player hasWeapon "rhs_weap_igla")) then
@@ -47,16 +47,33 @@ while { true } do {
 
 	_uavOperator = ["rhs_vdv_officer","rhsusf_army_ucp_teamleader"];
    	_uavRestricted = ["B_UavTerminal","O_UavTerminal","I_UavTerminal"];
-    _assignedItems = assignedItems player;
-	//_attachments = primaryWeaponItems player;
-
-	if (({"B_UavTerminal" == _x} count _assignedItems) > 0) then {
+    If ( ! isNil {assignedItems player}) then 
+    { _assignedItems = assignedItems player;
+	if (({"B_UavTerminal" == _x} count _assignedItems) > 0) then 
+		{
 		if (({player isKindOf _x} count _uavOperator) < 1) then {
-			player unassignItem "B_UavTerminal";
-			player removeItem "B_UavTerminal";
-			titleText [UAV_MSG,"PLAIN",3];
+		player unassignItem "B_UavTerminal";
+		player removeItem "B_UavTerminal";
+		titleText [UAV_MSG,"PLAIN",3];
 		};
 	};
+	if (({"O_UavTerminal" == _x} count _assignedItems) > 0) then 
+		{
+		if (({player isKindOf _x} count _uavOperator) < 1) then {
+		player unassignItem "O_UavTerminal";
+		player removeItem "O_UavTerminal";
+		titleText [UAV_MSG,"PLAIN",3];
+		};
+	};
+	if (({"I_UavTerminal" == _x} count _assignedItems) > 0) then 
+		{
+		if (({player isKindOf _x} count _uavOperator) < 1) then {
+		player unassignItem "I_UavTerminal";
+		player removeItem "I_UavTerminal";
+		titleText [UAV_MSG,"PLAIN",3];
+		};
+	};
+    };
 if ( player hasWeapon "Laserdesignator") then 
 { 
 	if ((typeOf Player != "rhs_vdv_officer_armored") && (typeOf Player != "rhsusf_army_ucp_teamleader")) then 
