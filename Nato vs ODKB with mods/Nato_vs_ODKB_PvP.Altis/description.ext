@@ -1,13 +1,13 @@
 ﻿//On Load
 author = www.TehGam.com;
 onLoadName = "NATO vs ODKB";
-OnLoadMission = "[Редакция от сообщества TEHGAM, вер. 3.1]";
+OnLoadMission = "[Редакция от сообщества TEHGAM, вер. 3.2]";
 loadScreen = "media\images\loading.paa";
 overviewPicture = "media\images\loading.paa";
 onLoadIntro = "";           //Displays a message while the intro is loading.
 onLoadIntroTime = 0;        //Time and date displayed while the intro loads. 1 visible, 0 hidden.
 onLoadMissionTime = 0;      //Time and date displayed while the mission loads. 1 visible, 0 hidden.
-forceRotorLibSimulation= 2; //Default value: 0 - options-based; 1 - force enable; 2 - force disable
+forceRotorLibSimulation= 0; //Default value: 0 - options-based; 1 - force enable; 2 - force disable
 
 class Header
 {
@@ -34,6 +34,7 @@ joinUnassigned = 1;       //0 = players forced into role on join
 //RespawnDialog = 1;  //Default = 1. show respawn timer and scoreboard when killed.
 Respawn = 3;
 RespawnDelay = 45;
+reviveBleedOutDelay = 600;
 respawnTemplates[] = {"Revive", "MenuPosition"};
 //respawnOnStart = -1;
 RespawnDialog = 1;
@@ -63,7 +64,6 @@ corpseRemovalMaxTime = 120; //Max time before removal
 
 class CfgFunctions
   {
-    // #include "functions\cfgfunctions.hpp"				// Integrated I&A functions
     #include "scripts\VAS\cfgfunctions.hpp"			// VAS
     #include "scripts\taw_vd\CfgFunctions.hpp"		// View distance
     
