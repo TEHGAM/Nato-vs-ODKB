@@ -8,7 +8,7 @@ if (!isServer && isNull player) then {isJIP=true;} else {isJIP=false;};
 enableSentences false;	// does this go here or 
 
 
-DAC_Basic_Value = 0;execVM "DAC\DAC_Config_Creator.sqf"; // Dynamic AI Creator
+
 
 // ЗАПУСКАЕТСЯ ТОЛЬКО НА СЕРВЕРЕ
 
@@ -67,3 +67,4 @@ if (!isServer) exitWith {
 //Запускается и на сервере и на клиенте.
 // _transportSqf = [] execVM "scripts\transport\init.sqf";
 // _transportInit = [] execVM "scripts\player\init.sqf";
+DAC_Basic_Value = 0;execVM "DAC\DAC_Config_Creator.sqf"; // Dynamic AI Creator
